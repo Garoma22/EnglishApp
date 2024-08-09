@@ -1,0 +1,1757 @@
+2024-08-06 14:06:53 - Starting EnglishApp using Java 17.0.10 with PID 11624 (C:\Users\volga\IdeaProjects\EnglishApp\target\classes started by volga in C:\Users\volga\IdeaProjects\EnglishApp)
+2024-08-06 14:06:53 - Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-08-06 14:06:53 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 14:06:54 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06 14:06:54 - Finished Spring Data repository scanning in 63 ms. Found 5 JPA repository interfaces.
+2024-08-06 14:06:54 - Tomcat initialized with port 8080 (http)
+2024-08-06 14:06:54 - Starting service [Tomcat]
+2024-08-06 14:06:54 - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-08-06 14:06:54 - Initializing Spring embedded WebApplicationContext
+2024-08-06 14:06:54 - Root WebApplicationContext: initialization completed in 1471 ms
+2024-08-06 14:06:54 - HikariPool-1 - Starting...
+2024-08-06 14:06:55 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@574059d5
+2024-08-06 14:06:55 - HikariPool-1 - Start completed.
+2024-08-06 14:06:55 - Set default schema name to public
+2024-08-06 14:06:55 - Creating database history table with name: public.databasechangelog
+2024-08-06 14:06:55 - Reading from public.databasechangelog
+2024-08-06 14:06:55 - Successfully acquired change log lock
+2024-08-06 14:06:55 - Using deploymentId: 2938815853
+2024-08-06 14:06:55 - Reading from public.databasechangelog
+2024-08-06 14:06:55 - Running Changeset: db/changelog/changeset/create-users-table.yaml::create-users::your_name
+2024-08-06 14:06:55 - Table users created
+2024-08-06 14:06:55 - ChangeSet db/changelog/changeset/create-users-table.yaml::create-users::your_name ran successfully in 23ms
+2024-08-06 14:06:55 - Running Changeset: db/changelog/changeset/create-languages-table.yaml::create-languages-table::Galkin
+2024-08-06 14:06:55 - Table languages created
+2024-08-06 14:06:55 - Unique constraint added to languages(code, name)
+2024-08-06 14:06:55 - ChangeSet db/changelog/changeset/create-languages-table.yaml::create-languages-table::Galkin ran successfully in 24ms
+2024-08-06 14:06:55 - Running Changeset: db/changelog/changeset/create-user-languages-table.yaml::create-user-languages::your_name
+2024-08-06 14:06:55 - Table user_languages created
+2024-08-06 14:06:55 - Foreign key constraint added to user_languages (user_id)
+2024-08-06 14:06:55 - Foreign key constraint added to user_languages (language_id)
+2024-08-06 14:06:55 - Unique constraint added to user_languages(user_id, language_id)
+2024-08-06 14:06:55 - ChangeSet db/changelog/changeset/create-user-languages-table.yaml::create-user-languages::your_name ran successfully in 25ms
+2024-08-06 14:06:55 - Running Changeset: db/changelog/changeset/create-words-table.yaml::create-words-table::your_name
+2024-08-06 14:06:55 - Table words created
+2024-08-06 14:06:55 - ChangeSet db/changelog/changeset/create-words-table.yaml::create-words-table::your_name ran successfully in 14ms
+2024-08-06 14:06:56 - Running Changeset: db/changelog/changeset/create-user-words-table.yaml::create-user-words::your_name
+2024-08-06 14:06:56 - Table user_words created
+2024-08-06 14:06:56 - ChangeSet db/changelog/changeset/create-user-words-table.yaml::create-user-words::your_name ran successfully in 10ms
+2024-08-06 14:06:56 - UPDATE SUMMARY
+2024-08-06 14:06:56 - Run:                          5
+2024-08-06 14:06:56 - Previously run:               0
+2024-08-06 14:06:56 - Filtered out:                 0
+2024-08-06 14:06:56 - -------------------------------
+2024-08-06 14:06:56 - Total change sets:            5
+2024-08-06 14:06:56 - Update summary generated
+2024-08-06 14:06:56 - Update command completed successfully.
+2024-08-06 14:06:56 - Liquibase: Update has been successful. Rows affected: 5
+2024-08-06 14:06:56 - Successfully released change log lock
+2024-08-06 14:06:56 - Command execution complete
+2024-08-06 14:06:56 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06 14:06:56 - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-08-06 14:06:56 - HHH000026: Second-level cache disabled
+2024-08-06 14:06:56 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06 14:06:56 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-06 14:06:57 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06 14:06:57 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 14:06:58 - Error setting bot's command list: Error executing org.telegram.telegrambots.meta.api.methods.commands.SetMyCommands query: [400] Bad Request: BOT_COMMAND_INVALID
+2024-08-06 14:06:58 - Unable to proxy interface-implementing method [public final org.telegram.telegrambots.bots.DefaultBotOptions org.telegram.telegrambots.bots.DefaultAbsSender.getOptions()] because it is marked as final, consider using interface-based JDK proxies instead.
+2024-08-06 14:06:58 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-06 14:06:58 - 2 mappings in 'requestMappingHandlerMapping'
+2024-08-06 14:06:58 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-08-06 14:06:58 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-08-06 14:06:58 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-08-06 14:06:59 - Tomcat started on port 8080 (http) with context path ''
+2024-08-06 14:06:59 - Started EnglishApp in 6.36 seconds (process running for 6.875)
+2024-08-06 14:07:09 - Message received: /start from chatId: 189377799
+2024-08-06 14:07:09 - Processing /start command
+2024-08-06 14:07:09 - User registered: User{id=1, chatId=189377799, firstName='Roman', lastName='Galkin', userName='garoma1989', registeredAt=2024-08-06 14:07:09.357}
+2024-08-06 14:07:16 - Callback data received: set_language:ENGLISH
+2024-08-06 14:07:16 - setUserLanguage отработал
+2024-08-06 14:07:16 - User: User{id=1, chatId=189377799, firstName='Roman', lastName='Galkin', userName='garoma1989', registeredAt=2024-08-06 14:07:09.357}
+2024-08-06 14:07:16 - Language: not found
+2024-08-06 14:07:16 - User or Language not found
+2024-08-06 14:07:23 - Callback data received: set_language:ESPAÑOL
+2024-08-06 14:07:23 - setUserLanguage отработал
+2024-08-06 14:07:23 - User: User{id=1, chatId=189377799, firstName='Roman', lastName='Galkin', userName='garoma1989', registeredAt=2024-08-06 14:07:09.357}
+2024-08-06 14:07:23 - Language: not found
+2024-08-06 14:07:23 - User or Language not found
+2024-08-06 14:10:36 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 14:10:36 - HikariPool-1 - Shutdown initiated...
+2024-08-06 14:10:36 - HikariPool-1 - Shutdown completed.
+2024-08-06 14:10:41 - Starting EnglishApp using Java 17.0.10 with PID 2620 (C:\Users\volga\IdeaProjects\EnglishApp\target\classes started by volga in C:\Users\volga\IdeaProjects\EnglishApp)
+2024-08-06 14:10:41 - Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-08-06 14:10:41 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 14:10:41 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06 14:10:41 - Finished Spring Data repository scanning in 58 ms. Found 5 JPA repository interfaces.
+2024-08-06 14:10:42 - Tomcat initialized with port 8080 (http)
+2024-08-06 14:10:42 - Starting service [Tomcat]
+2024-08-06 14:10:42 - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-08-06 14:10:42 - Initializing Spring embedded WebApplicationContext
+2024-08-06 14:10:42 - Root WebApplicationContext: initialization completed in 1422 ms
+2024-08-06 14:10:42 - HikariPool-1 - Starting...
+2024-08-06 14:10:42 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5cd96b41
+2024-08-06 14:10:42 - HikariPool-1 - Start completed.
+2024-08-06 14:10:43 - Set default schema name to public
+2024-08-06 14:10:43 - Creating database history table with name: public.databasechangelog
+2024-08-06 14:10:43 - Reading from public.databasechangelog
+2024-08-06 14:10:43 - Successfully acquired change log lock
+2024-08-06 14:10:43 - Using deploymentId: 2939043514
+2024-08-06 14:10:43 - Reading from public.databasechangelog
+2024-08-06 14:10:43 - Running Changeset: db/changelog/changeset/create-users-table.yaml::create-users::your_name
+2024-08-06 14:10:43 - Table users created
+2024-08-06 14:10:43 - ChangeSet db/changelog/changeset/create-users-table.yaml::create-users::your_name ran successfully in 18ms
+2024-08-06 14:10:43 - Running Changeset: db/changelog/changeset/create-languages-table.yaml::create-languages-table::Galkin
+2024-08-06 14:10:43 - Table languages created
+2024-08-06 14:10:43 - Unique constraint added to languages(code, name)
+2024-08-06 14:10:43 - ChangeSet db/changelog/changeset/create-languages-table.yaml::create-languages-table::Galkin ran successfully in 25ms
+2024-08-06 14:10:43 - Running Changeset: db/changelog/changeset/create-user-languages-table.yaml::create-user-languages::your_name
+2024-08-06 14:10:43 - Table user_languages created
+2024-08-06 14:10:43 - Foreign key constraint added to user_languages (user_id)
+2024-08-06 14:10:43 - Foreign key constraint added to user_languages (language_id)
+2024-08-06 14:10:43 - Unique constraint added to user_languages(user_id, language_id)
+2024-08-06 14:10:43 - ChangeSet db/changelog/changeset/create-user-languages-table.yaml::create-user-languages::your_name ran successfully in 22ms
+2024-08-06 14:10:43 - Running Changeset: db/changelog/changeset/create-words-table.yaml::create-words-table::your_name
+2024-08-06 14:10:43 - Table words created
+2024-08-06 14:10:43 - ChangeSet db/changelog/changeset/create-words-table.yaml::create-words-table::your_name ran successfully in 16ms
+2024-08-06 14:10:43 - Running Changeset: db/changelog/changeset/create-user-words-table.yaml::create-user-words::your_name
+2024-08-06 14:10:43 - Table user_words created
+2024-08-06 14:10:43 - ChangeSet db/changelog/changeset/create-user-words-table.yaml::create-user-words::your_name ran successfully in 10ms
+2024-08-06 14:10:43 - UPDATE SUMMARY
+2024-08-06 14:10:43 - Run:                          5
+2024-08-06 14:10:43 - Previously run:               0
+2024-08-06 14:10:43 - Filtered out:                 0
+2024-08-06 14:10:43 - -------------------------------
+2024-08-06 14:10:43 - Total change sets:            5
+2024-08-06 14:10:43 - Update summary generated
+2024-08-06 14:10:43 - Update command completed successfully.
+2024-08-06 14:10:43 - Liquibase: Update has been successful. Rows affected: 5
+2024-08-06 14:10:43 - Successfully released change log lock
+2024-08-06 14:10:43 - Command execution complete
+2024-08-06 14:10:43 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06 14:10:43 - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-08-06 14:10:43 - HHH000026: Second-level cache disabled
+2024-08-06 14:10:44 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06 14:10:44 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-06 14:10:44 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06 14:10:44 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 14:10:45 - Error setting bot's command list: Error executing org.telegram.telegrambots.meta.api.methods.commands.SetMyCommands query: [400] Bad Request: BOT_COMMAND_INVALID
+2024-08-06 14:10:46 - Unable to proxy interface-implementing method [public final org.telegram.telegrambots.bots.DefaultBotOptions org.telegram.telegrambots.bots.DefaultAbsSender.getOptions()] because it is marked as final, consider using interface-based JDK proxies instead.
+2024-08-06 14:10:46 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-06 14:10:46 - 2 mappings in 'requestMappingHandlerMapping'
+2024-08-06 14:10:46 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-08-06 14:10:46 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-08-06 14:10:46 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-08-06 14:10:46 - Tomcat started on port 8080 (http) with context path ''
+2024-08-06 14:10:46 - Started EnglishApp in 6.082 seconds (process running for 6.459)
+2024-08-06 14:11:02 - Message received: /start from chatId: 189377799
+2024-08-06 14:11:02 - Processing /start command
+2024-08-06 14:11:02 - User registered: User{id=1, chatId=189377799, firstName='Roman', lastName='Galkin', userName='garoma1989', registeredAt=2024-08-06 14:11:02.363}
+2024-08-06 14:11:02 - isLanguageSet отработал, язык не найден
+2024-08-06 14:11:05 - Сюда доходим 
+2024-08-06 14:11:05 - Callback data received: English
+2024-08-06 14:11:05 - setUserLanguage отработал
+2024-08-06 14:11:05 - User: User{id=1, chatId=189377799, firstName='Roman', lastName='Galkin', userName='garoma1989', registeredAt=2024-08-06 14:11:02.363}
+2024-08-06 14:11:05 - Language: Language(id=1, code=en, name=English)
+2024-08-06 14:11:05 - Saving UserLanguage: UserLanguage(id=null, user=User{id=1, chatId=189377799, firstName='Roman', lastName='Galkin', userName='garoma1989', registeredAt=2024-08-06 14:11:02.363}, language=Language(id=1, code=en, name=English))
+2024-08-06 14:11:05 - UserLanguage saved
+2024-08-06 14:11:05 - Message received:  язык установлен  from chatId: 189377799
+2024-08-06 14:11:11 - Сюда доходим 
+2024-08-06 14:11:11 - Callback data received: Español
+2024-08-06 14:11:11 - setUserLanguage отработал
+2024-08-06 14:11:11 - User: User{id=1, chatId=189377799, firstName='Roman', lastName='Galkin', userName='garoma1989', registeredAt=2024-08-06 14:11:02.363}
+2024-08-06 14:11:11 - Language: Language(id=2, code=es, name=Español)
+2024-08-06 14:11:11 - Saving UserLanguage: UserLanguage(id=null, user=User{id=1, chatId=189377799, firstName='Roman', lastName='Galkin', userName='garoma1989', registeredAt=2024-08-06 14:11:02.363}, language=Language(id=2, code=es, name=Español))
+2024-08-06 14:11:11 - UserLanguage saved
+2024-08-06 14:11:11 - Message received:  язык установлен  from chatId: 189377799
+2024-08-06 14:13:33 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 14:13:33 - HikariPool-1 - Shutdown initiated...
+2024-08-06 14:13:33 - HikariPool-1 - Shutdown completed.
+2024-08-06 14:13:36 - Starting EnglishApp using Java 17.0.10 with PID 3728 (C:\Users\volga\IdeaProjects\EnglishApp\target\classes started by volga in C:\Users\volga\IdeaProjects\EnglishApp)
+2024-08-06 14:13:36 - Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-08-06 14:13:36 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 14:13:37 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06 14:13:37 - Finished Spring Data repository scanning in 59 ms. Found 5 JPA repository interfaces.
+2024-08-06 14:13:38 - Tomcat initialized with port 8080 (http)
+2024-08-06 14:13:38 - Starting service [Tomcat]
+2024-08-06 14:13:38 - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-08-06 14:13:38 - Initializing Spring embedded WebApplicationContext
+2024-08-06 14:13:38 - Root WebApplicationContext: initialization completed in 1345 ms
+2024-08-06 14:13:38 - HikariPool-1 - Starting...
+2024-08-06 14:13:38 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5b000fe6
+2024-08-06 14:13:38 - HikariPool-1 - Start completed.
+2024-08-06 14:13:38 - Set default schema name to public
+2024-08-06 14:13:38 - Creating database history table with name: public.databasechangelog
+2024-08-06 14:13:39 - Reading from public.databasechangelog
+2024-08-06 14:13:39 - Successfully acquired change log lock
+2024-08-06 14:13:39 - Using deploymentId: 2939219151
+2024-08-06 14:13:39 - Reading from public.databasechangelog
+2024-08-06 14:13:39 - Running Changeset: db/changelog/changeset/create-users-table.yaml::create-users::your_name
+2024-08-06 14:13:39 - Table users created
+2024-08-06 14:13:39 - ChangeSet db/changelog/changeset/create-users-table.yaml::create-users::your_name ran successfully in 21ms
+2024-08-06 14:13:39 - Running Changeset: db/changelog/changeset/create-languages-table.yaml::create-languages-table::Galkin
+2024-08-06 14:13:39 - Table languages created
+2024-08-06 14:13:39 - Unique constraint added to languages(code, name)
+2024-08-06 14:13:39 - ChangeSet db/changelog/changeset/create-languages-table.yaml::create-languages-table::Galkin ran successfully in 25ms
+2024-08-06 14:13:39 - Running Changeset: db/changelog/changeset/create-user-languages-table.yaml::create-user-languages::your_name
+2024-08-06 14:13:39 - Table user_languages created
+2024-08-06 14:13:39 - Foreign key constraint added to user_languages (user_id)
+2024-08-06 14:13:39 - Foreign key constraint added to user_languages (language_id)
+2024-08-06 14:13:39 - Unique constraint added to user_languages(user_id, language_id)
+2024-08-06 14:13:39 - ChangeSet db/changelog/changeset/create-user-languages-table.yaml::create-user-languages::your_name ran successfully in 26ms
+2024-08-06 14:13:39 - Running Changeset: db/changelog/changeset/create-words-table.yaml::create-words-table::your_name
+2024-08-06 14:13:39 - ChangeSet db/changelog/changeset/create-words-table.yaml::create-words-table::your_name encountered an exception.
+liquibase.exception.DatabaseException: ERROR: relation "words" already exists [Failed SQL: (0) CREATE TABLE public.words (id BIGINT GENERATED BY DEFAULT AS IDENTITY NOT NULL, language_id BIGINT NOT NULL, word VARCHAR(255) NOT NULL, translation VARCHAR(255) NOT NULL, example TEXT, CONSTRAINT words_pkey PRIMARY KEY (id))]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:476)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:83)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:185)
+	at liquibase.executor.AbstractExecutor.execute(AbstractExecutor.java:141)
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1176)
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:768)
+	at liquibase.changelog.visitor.UpdateVisitor.executeAcceptedChange(UpdateVisitor.java:119)
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:68)
+	at liquibase.changelog.ChangeLogIterator.lambda$run$0(ChangeLogIterator.java:131)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.changelog.ChangeLogIterator.lambda$run$1(ChangeLogIterator.java:120)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.Scope.child(Scope.java:257)
+	at liquibase.Scope.child(Scope.java:261)
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:89)
+	at liquibase.command.core.AbstractUpdateCommandStep.lambda$run$0(AbstractUpdateCommandStep.java:112)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.command.core.AbstractUpdateCommandStep.run(AbstractUpdateCommandStep.java:110)
+	at liquibase.command.core.UpdateCommandStep.run(UpdateCommandStep.java:105)
+	at liquibase.command.CommandScope.execute(CommandScope.java:219)
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:245)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.Liquibase.runInScope(Liquibase.java:1436)
+	at liquibase.Liquibase.update(Liquibase.java:234)
+	at liquibase.Liquibase.update(Liquibase.java:212)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:305)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:257)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.Scope.child(Scope.java:257)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:250)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1820)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1769)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1232)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:950)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:464)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1358)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1347)
+	at com.crud.myEnglishApp.EnglishApp.main(EnglishApp.java:16)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "words" already exists
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:470)
+	... 64 common frames omitted
+2024-08-06 14:13:39 - UPDATE SUMMARY
+2024-08-06 14:13:39 - Run:                          3
+2024-08-06 14:13:39 - Previously run:               0
+2024-08-06 14:13:39 - Filtered out:                 0
+2024-08-06 14:13:39 - -------------------------------
+2024-08-06 14:13:39 - Total change sets:            5
+2024-08-06 14:13:39 - Update summary generated
+2024-08-06 14:13:39 - Update command encountered an exception.
+2024-08-06 14:13:39 - Successfully released change log lock
+2024-08-06 14:13:39 - Logging exception.
+2024-08-06 14:13:39 - ERROR: Exception Details
+2024-08-06 14:13:39 - ERROR: Exception Primary Class:  PSQLException
+2024-08-06 14:13:39 - ERROR: Exception Primary Reason:  ERROR: relation "words" already exists
+2024-08-06 14:13:39 - ERROR: Exception Primary Source:  PostgreSQL 16.3 (Debian 16.3-1.pgdg120+1)
+2024-08-06 14:13:39 - Command execution complete
+2024-08-06 14:13:39 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/changeset/create-words-table.yaml::create-words-table::your_name:
+     Reason: liquibase.exception.DatabaseException: ERROR: relation "words" already exists [Failed SQL: (0) CREATE TABLE public.words (id BIGINT GENERATED BY DEFAULT AS IDENTITY NOT NULL, language_id BIGINT NOT NULL, word VARCHAR(255) NOT NULL, translation VARCHAR(255) NOT NULL, example TEXT, CONSTRAINT words_pkey PRIMARY KEY (id))]
+2024-08-06 14:13:39 - HikariPool-1 - Shutdown initiated...
+2024-08-06 14:13:39 - HikariPool-1 - Shutdown completed.
+2024-08-06 14:13:39 - Stopping service [Tomcat]
+2024-08-06 14:13:39 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-06 14:13:39 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/changeset/create-words-table.yaml::create-words-table::your_name:
+     Reason: liquibase.exception.DatabaseException: ERROR: relation "words" already exists [Failed SQL: (0) CREATE TABLE public.words (id BIGINT GENERATED BY DEFAULT AS IDENTITY NOT NULL, language_id BIGINT NOT NULL, word VARCHAR(255) NOT NULL, translation VARCHAR(255) NOT NULL, example TEXT, CONSTRAINT words_pkey PRIMARY KEY (id))]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1773)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1232)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:950)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:464)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1358)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1347)
+	at com.crud.myEnglishApp.EnglishApp.main(EnglishApp.java:16)
+Caused by: liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/changeset/create-words-table.yaml::create-words-table::your_name:
+     Reason: liquibase.exception.DatabaseException: ERROR: relation "words" already exists [Failed SQL: (0) CREATE TABLE public.words (id BIGINT GENERATED BY DEFAULT AS IDENTITY NOT NULL, language_id BIGINT NOT NULL, word VARCHAR(255) NOT NULL, translation VARCHAR(255) NOT NULL, example TEXT, CONSTRAINT words_pkey PRIMARY KEY (id))]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:267)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1820)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1769)
+	... 18 common frames omitted
+Caused by: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/changeset/create-words-table.yaml::create-words-table::your_name:
+     Reason: liquibase.exception.DatabaseException: ERROR: relation "words" already exists [Failed SQL: (0) CREATE TABLE public.words (id BIGINT GENERATED BY DEFAULT AS IDENTITY NOT NULL, language_id BIGINT NOT NULL, word VARCHAR(255) NOT NULL, translation VARCHAR(255) NOT NULL, example TEXT, CONSTRAINT words_pkey PRIMARY KEY (id))]
+	at liquibase.command.CommandScope.execute(CommandScope.java:257)
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:245)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.Liquibase.runInScope(Liquibase.java:1436)
+	at liquibase.Liquibase.update(Liquibase.java:234)
+	at liquibase.Liquibase.update(Liquibase.java:212)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:305)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:257)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.Scope.child(Scope.java:257)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:250)
+	... 20 common frames omitted
+Caused by: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/changeset/create-words-table.yaml::create-words-table::your_name:
+     Reason: liquibase.exception.DatabaseException: ERROR: relation "words" already exists [Failed SQL: (0) CREATE TABLE public.words (id BIGINT GENERATED BY DEFAULT AS IDENTITY NOT NULL, language_id BIGINT NOT NULL, word VARCHAR(255) NOT NULL, translation VARCHAR(255) NOT NULL, example TEXT, CONSTRAINT words_pkey PRIMARY KEY (id))]
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:148)
+	at liquibase.command.core.AbstractUpdateCommandStep.lambda$run$0(AbstractUpdateCommandStep.java:112)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.command.core.AbstractUpdateCommandStep.run(AbstractUpdateCommandStep.java:110)
+	at liquibase.command.core.UpdateCommandStep.run(UpdateCommandStep.java:105)
+	at liquibase.command.CommandScope.execute(CommandScope.java:219)
+	... 36 common frames omitted
+Caused by: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/changeset/create-words-table.yaml::create-words-table::your_name:
+     Reason: liquibase.exception.DatabaseException: ERROR: relation "words" already exists [Failed SQL: (0) CREATE TABLE public.words (id BIGINT GENERATED BY DEFAULT AS IDENTITY NOT NULL, language_id BIGINT NOT NULL, word VARCHAR(255) NOT NULL, translation VARCHAR(255) NOT NULL, example TEXT, CONSTRAINT words_pkey PRIMARY KEY (id))]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:812)
+	at liquibase.changelog.visitor.UpdateVisitor.executeAcceptedChange(UpdateVisitor.java:119)
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:68)
+	at liquibase.changelog.ChangeLogIterator.lambda$run$0(ChangeLogIterator.java:131)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.changelog.ChangeLogIterator.lambda$run$1(ChangeLogIterator.java:120)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.Scope.child(Scope.java:257)
+	at liquibase.Scope.child(Scope.java:261)
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:89)
+	... 44 common frames omitted
+Caused by: liquibase.exception.DatabaseException: ERROR: relation "words" already exists [Failed SQL: (0) CREATE TABLE public.words (id BIGINT GENERATED BY DEFAULT AS IDENTITY NOT NULL, language_id BIGINT NOT NULL, word VARCHAR(255) NOT NULL, translation VARCHAR(255) NOT NULL, example TEXT, CONSTRAINT words_pkey PRIMARY KEY (id))]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:476)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:83)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:185)
+	at liquibase.executor.AbstractExecutor.execute(AbstractExecutor.java:141)
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1176)
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:768)
+	... 59 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "words" already exists
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:470)
+	... 64 common frames omitted
+2024-08-06 14:14:29 - Starting EnglishApp using Java 17.0.10 with PID 13100 (C:\Users\volga\IdeaProjects\EnglishApp\target\classes started by volga in C:\Users\volga\IdeaProjects\EnglishApp)
+2024-08-06 14:14:29 - Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-08-06 14:14:29 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 14:14:30 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06 14:14:30 - Finished Spring Data repository scanning in 62 ms. Found 5 JPA repository interfaces.
+2024-08-06 14:14:31 - Tomcat initialized with port 8080 (http)
+2024-08-06 14:14:31 - Starting service [Tomcat]
+2024-08-06 14:14:31 - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-08-06 14:14:31 - Initializing Spring embedded WebApplicationContext
+2024-08-06 14:14:31 - Root WebApplicationContext: initialization completed in 1338 ms
+2024-08-06 14:14:31 - HikariPool-1 - Starting...
+2024-08-06 14:14:31 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@664632e9
+2024-08-06 14:14:31 - HikariPool-1 - Start completed.
+2024-08-06 14:14:31 - Set default schema name to public
+2024-08-06 14:14:32 - Reading from public.databasechangelog
+2024-08-06 14:14:32 - Successfully acquired change log lock
+2024-08-06 14:14:32 - Using deploymentId: 2939272203
+2024-08-06 14:14:32 - Reading from public.databasechangelog
+2024-08-06 14:14:32 - Running Changeset: db/changelog/changeset/create-words-table.yaml::create-words-table::your_name
+2024-08-06 14:14:32 - ChangeSet db/changelog/changeset/create-words-table.yaml::create-words-table::your_name encountered an exception.
+liquibase.exception.DatabaseException: ERROR: relation "words" already exists [Failed SQL: (0) CREATE TABLE public.words (id BIGINT GENERATED BY DEFAULT AS IDENTITY NOT NULL, language_id BIGINT NOT NULL, word VARCHAR(255) NOT NULL, translation VARCHAR(255) NOT NULL, example TEXT, CONSTRAINT words_pkey PRIMARY KEY (id))]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:476)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:83)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:185)
+	at liquibase.executor.AbstractExecutor.execute(AbstractExecutor.java:141)
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1176)
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:768)
+	at liquibase.changelog.visitor.UpdateVisitor.executeAcceptedChange(UpdateVisitor.java:119)
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:68)
+	at liquibase.changelog.ChangeLogIterator.lambda$run$0(ChangeLogIterator.java:131)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.changelog.ChangeLogIterator.lambda$run$1(ChangeLogIterator.java:120)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.Scope.child(Scope.java:257)
+	at liquibase.Scope.child(Scope.java:261)
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:89)
+	at liquibase.command.core.AbstractUpdateCommandStep.lambda$run$0(AbstractUpdateCommandStep.java:112)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.command.core.AbstractUpdateCommandStep.run(AbstractUpdateCommandStep.java:110)
+	at liquibase.command.core.UpdateCommandStep.run(UpdateCommandStep.java:105)
+	at liquibase.command.CommandScope.execute(CommandScope.java:219)
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:245)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.Liquibase.runInScope(Liquibase.java:1436)
+	at liquibase.Liquibase.update(Liquibase.java:234)
+	at liquibase.Liquibase.update(Liquibase.java:212)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:305)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:257)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.Scope.child(Scope.java:257)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:250)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1820)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1769)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1232)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:950)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:464)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1358)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1347)
+	at com.crud.myEnglishApp.EnglishApp.main(EnglishApp.java:16)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "words" already exists
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:470)
+	... 64 common frames omitted
+2024-08-06 14:14:32 - UPDATE SUMMARY
+2024-08-06 14:14:32 - Run:                          0
+2024-08-06 14:14:32 - Previously run:               3
+2024-08-06 14:14:32 - Filtered out:                 0
+2024-08-06 14:14:32 - -------------------------------
+2024-08-06 14:14:32 - Total change sets:            5
+2024-08-06 14:14:32 - Update summary generated
+2024-08-06 14:14:32 - Update command encountered an exception.
+2024-08-06 14:14:32 - Successfully released change log lock
+2024-08-06 14:14:32 - Logging exception.
+2024-08-06 14:14:32 - ERROR: Exception Details
+2024-08-06 14:14:32 - ERROR: Exception Primary Class:  PSQLException
+2024-08-06 14:14:32 - ERROR: Exception Primary Reason:  ERROR: relation "words" already exists
+2024-08-06 14:14:32 - ERROR: Exception Primary Source:  PostgreSQL 16.3 (Debian 16.3-1.pgdg120+1)
+2024-08-06 14:14:32 - Command execution complete
+2024-08-06 14:14:32 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/changeset/create-words-table.yaml::create-words-table::your_name:
+     Reason: liquibase.exception.DatabaseException: ERROR: relation "words" already exists [Failed SQL: (0) CREATE TABLE public.words (id BIGINT GENERATED BY DEFAULT AS IDENTITY NOT NULL, language_id BIGINT NOT NULL, word VARCHAR(255) NOT NULL, translation VARCHAR(255) NOT NULL, example TEXT, CONSTRAINT words_pkey PRIMARY KEY (id))]
+2024-08-06 14:14:32 - HikariPool-1 - Shutdown initiated...
+2024-08-06 14:14:32 - HikariPool-1 - Shutdown completed.
+2024-08-06 14:14:32 - Stopping service [Tomcat]
+2024-08-06 14:14:32 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-06 14:14:32 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/changeset/create-words-table.yaml::create-words-table::your_name:
+     Reason: liquibase.exception.DatabaseException: ERROR: relation "words" already exists [Failed SQL: (0) CREATE TABLE public.words (id BIGINT GENERATED BY DEFAULT AS IDENTITY NOT NULL, language_id BIGINT NOT NULL, word VARCHAR(255) NOT NULL, translation VARCHAR(255) NOT NULL, example TEXT, CONSTRAINT words_pkey PRIMARY KEY (id))]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1773)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1232)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:950)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:464)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1358)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1347)
+	at com.crud.myEnglishApp.EnglishApp.main(EnglishApp.java:16)
+Caused by: liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/changeset/create-words-table.yaml::create-words-table::your_name:
+     Reason: liquibase.exception.DatabaseException: ERROR: relation "words" already exists [Failed SQL: (0) CREATE TABLE public.words (id BIGINT GENERATED BY DEFAULT AS IDENTITY NOT NULL, language_id BIGINT NOT NULL, word VARCHAR(255) NOT NULL, translation VARCHAR(255) NOT NULL, example TEXT, CONSTRAINT words_pkey PRIMARY KEY (id))]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:267)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1820)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1769)
+	... 18 common frames omitted
+Caused by: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/changeset/create-words-table.yaml::create-words-table::your_name:
+     Reason: liquibase.exception.DatabaseException: ERROR: relation "words" already exists [Failed SQL: (0) CREATE TABLE public.words (id BIGINT GENERATED BY DEFAULT AS IDENTITY NOT NULL, language_id BIGINT NOT NULL, word VARCHAR(255) NOT NULL, translation VARCHAR(255) NOT NULL, example TEXT, CONSTRAINT words_pkey PRIMARY KEY (id))]
+	at liquibase.command.CommandScope.execute(CommandScope.java:257)
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:245)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.Liquibase.runInScope(Liquibase.java:1436)
+	at liquibase.Liquibase.update(Liquibase.java:234)
+	at liquibase.Liquibase.update(Liquibase.java:212)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:305)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:257)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.Scope.child(Scope.java:257)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:250)
+	... 20 common frames omitted
+Caused by: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/changeset/create-words-table.yaml::create-words-table::your_name:
+     Reason: liquibase.exception.DatabaseException: ERROR: relation "words" already exists [Failed SQL: (0) CREATE TABLE public.words (id BIGINT GENERATED BY DEFAULT AS IDENTITY NOT NULL, language_id BIGINT NOT NULL, word VARCHAR(255) NOT NULL, translation VARCHAR(255) NOT NULL, example TEXT, CONSTRAINT words_pkey PRIMARY KEY (id))]
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:148)
+	at liquibase.command.core.AbstractUpdateCommandStep.lambda$run$0(AbstractUpdateCommandStep.java:112)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.command.core.AbstractUpdateCommandStep.run(AbstractUpdateCommandStep.java:110)
+	at liquibase.command.core.UpdateCommandStep.run(UpdateCommandStep.java:105)
+	at liquibase.command.CommandScope.execute(CommandScope.java:219)
+	... 36 common frames omitted
+Caused by: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/changeset/create-words-table.yaml::create-words-table::your_name:
+     Reason: liquibase.exception.DatabaseException: ERROR: relation "words" already exists [Failed SQL: (0) CREATE TABLE public.words (id BIGINT GENERATED BY DEFAULT AS IDENTITY NOT NULL, language_id BIGINT NOT NULL, word VARCHAR(255) NOT NULL, translation VARCHAR(255) NOT NULL, example TEXT, CONSTRAINT words_pkey PRIMARY KEY (id))]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:812)
+	at liquibase.changelog.visitor.UpdateVisitor.executeAcceptedChange(UpdateVisitor.java:119)
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:68)
+	at liquibase.changelog.ChangeLogIterator.lambda$run$0(ChangeLogIterator.java:131)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.changelog.ChangeLogIterator.lambda$run$1(ChangeLogIterator.java:120)
+	at liquibase.Scope.lambda$child$0(Scope.java:191)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:169)
+	at liquibase.Scope.child(Scope.java:257)
+	at liquibase.Scope.child(Scope.java:261)
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:89)
+	... 44 common frames omitted
+Caused by: liquibase.exception.DatabaseException: ERROR: relation "words" already exists [Failed SQL: (0) CREATE TABLE public.words (id BIGINT GENERATED BY DEFAULT AS IDENTITY NOT NULL, language_id BIGINT NOT NULL, word VARCHAR(255) NOT NULL, translation VARCHAR(255) NOT NULL, example TEXT, CONSTRAINT words_pkey PRIMARY KEY (id))]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:476)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:83)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:185)
+	at liquibase.executor.AbstractExecutor.execute(AbstractExecutor.java:141)
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1176)
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:768)
+	... 59 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "words" already exists
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:326)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:302)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:297)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:470)
+	... 64 common frames omitted
+2024-08-06 14:14:47 - Starting EnglishApp using Java 17.0.10 with PID 8260 (C:\Users\volga\IdeaProjects\EnglishApp\target\classes started by volga in C:\Users\volga\IdeaProjects\EnglishApp)
+2024-08-06 14:14:47 - Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-08-06 14:14:47 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 14:14:48 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06 14:14:48 - Finished Spring Data repository scanning in 49 ms. Found 5 JPA repository interfaces.
+2024-08-06 14:14:48 - Tomcat initialized with port 8080 (http)
+2024-08-06 14:14:48 - Starting service [Tomcat]
+2024-08-06 14:14:48 - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-08-06 14:14:48 - Initializing Spring embedded WebApplicationContext
+2024-08-06 14:14:48 - Root WebApplicationContext: initialization completed in 1279 ms
+2024-08-06 14:14:49 - HikariPool-1 - Starting...
+2024-08-06 14:14:49 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@306c7bf6
+2024-08-06 14:14:49 - HikariPool-1 - Start completed.
+2024-08-06 14:14:49 - Set default schema name to public
+2024-08-06 14:14:49 - Creating database history table with name: public.databasechangelog
+2024-08-06 14:14:49 - Reading from public.databasechangelog
+2024-08-06 14:14:49 - Successfully acquired change log lock
+2024-08-06 14:14:49 - Using deploymentId: 2939289846
+2024-08-06 14:14:49 - Reading from public.databasechangelog
+2024-08-06 14:14:49 - Running Changeset: db/changelog/changeset/create-users-table.yaml::create-users::your_name
+2024-08-06 14:14:49 - Table users created
+2024-08-06 14:14:49 - ChangeSet db/changelog/changeset/create-users-table.yaml::create-users::your_name ran successfully in 22ms
+2024-08-06 14:14:49 - Running Changeset: db/changelog/changeset/create-languages-table.yaml::create-languages-table::Galkin
+2024-08-06 14:14:49 - Table languages created
+2024-08-06 14:14:49 - Unique constraint added to languages(code, name)
+2024-08-06 14:14:49 - ChangeSet db/changelog/changeset/create-languages-table.yaml::create-languages-table::Galkin ran successfully in 26ms
+2024-08-06 14:14:49 - Running Changeset: db/changelog/changeset/create-user-languages-table.yaml::create-user-languages::your_name
+2024-08-06 14:14:49 - Table user_languages created
+2024-08-06 14:14:49 - Foreign key constraint added to user_languages (user_id)
+2024-08-06 14:14:49 - Foreign key constraint added to user_languages (language_id)
+2024-08-06 14:14:49 - Unique constraint added to user_languages(user_id, language_id)
+2024-08-06 14:14:49 - ChangeSet db/changelog/changeset/create-user-languages-table.yaml::create-user-languages::your_name ran successfully in 26ms
+2024-08-06 14:14:49 - Running Changeset: db/changelog/changeset/create-words-table.yaml::create-words-table::your_name
+2024-08-06 14:14:49 - Table words created
+2024-08-06 14:14:49 - ChangeSet db/changelog/changeset/create-words-table.yaml::create-words-table::your_name ran successfully in 14ms
+2024-08-06 14:14:49 - Running Changeset: db/changelog/changeset/create-user-words-table.yaml::create-user-words::your_name
+2024-08-06 14:14:50 - Table user_words created
+2024-08-06 14:14:50 - ChangeSet db/changelog/changeset/create-user-words-table.yaml::create-user-words::your_name ran successfully in 11ms
+2024-08-06 14:14:50 - UPDATE SUMMARY
+2024-08-06 14:14:50 - Run:                          5
+2024-08-06 14:14:50 - Previously run:               0
+2024-08-06 14:14:50 - Filtered out:                 0
+2024-08-06 14:14:50 - -------------------------------
+2024-08-06 14:14:50 - Total change sets:            5
+2024-08-06 14:14:50 - Update summary generated
+2024-08-06 14:14:50 - Update command completed successfully.
+2024-08-06 14:14:50 - Liquibase: Update has been successful. Rows affected: 5
+2024-08-06 14:14:50 - Successfully released change log lock
+2024-08-06 14:14:50 - Command execution complete
+2024-08-06 14:14:50 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06 14:14:50 - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-08-06 14:14:50 - HHH000026: Second-level cache disabled
+2024-08-06 14:14:50 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06 14:14:50 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-06 14:14:51 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06 14:14:51 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 14:14:52 - Error setting bot's command list: Error executing org.telegram.telegrambots.meta.api.methods.commands.SetMyCommands query: [400] Bad Request: BOT_COMMAND_INVALID
+2024-08-06 14:14:52 - Unable to proxy interface-implementing method [public final org.telegram.telegrambots.bots.DefaultBotOptions org.telegram.telegrambots.bots.DefaultAbsSender.getOptions()] because it is marked as final, consider using interface-based JDK proxies instead.
+2024-08-06 14:14:52 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-06 14:14:52 - 2 mappings in 'requestMappingHandlerMapping'
+2024-08-06 14:14:52 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-08-06 14:14:52 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-08-06 14:14:52 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-08-06 14:14:52 - Tomcat started on port 8080 (http) with context path ''
+2024-08-06 14:14:53 - Started EnglishApp in 5.832 seconds (process running for 6.279)
+2024-08-06 14:16:08 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 14:16:08 - HikariPool-1 - Shutdown initiated...
+2024-08-06 14:16:08 - HikariPool-1 - Shutdown completed.
+2024-08-06 14:16:11 - Starting EnglishApp using Java 17.0.10 with PID 15904 (C:\Users\volga\IdeaProjects\EnglishApp\target\classes started by volga in C:\Users\volga\IdeaProjects\EnglishApp)
+2024-08-06 14:16:11 - Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-08-06 14:16:11 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 14:16:12 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06 14:16:12 - Finished Spring Data repository scanning in 61 ms. Found 5 JPA repository interfaces.
+2024-08-06 14:16:13 - Tomcat initialized with port 8080 (http)
+2024-08-06 14:16:13 - Starting service [Tomcat]
+2024-08-06 14:16:13 - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-08-06 14:16:13 - Initializing Spring embedded WebApplicationContext
+2024-08-06 14:16:13 - Root WebApplicationContext: initialization completed in 1262 ms
+2024-08-06 14:16:13 - HikariPool-1 - Starting...
+2024-08-06 14:16:13 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@306c7bf6
+2024-08-06 14:16:13 - HikariPool-1 - Start completed.
+2024-08-06 14:16:13 - Set default schema name to public
+2024-08-06 14:16:14 - Reading from public.databasechangelog
+2024-08-06 14:16:14 - Database is up to date, no changesets to execute
+2024-08-06 14:16:14 - Reading from public.databasechangelog
+2024-08-06 14:16:14 - UPDATE SUMMARY
+2024-08-06 14:16:14 - Run:                          0
+2024-08-06 14:16:14 - Previously run:               5
+2024-08-06 14:16:14 - Filtered out:                 0
+2024-08-06 14:16:14 - -------------------------------
+2024-08-06 14:16:14 - Total change sets:            5
+2024-08-06 14:16:14 - Update summary generated
+2024-08-06 14:16:14 - Successfully released change log lock
+2024-08-06 14:16:14 - Command execution complete
+2024-08-06 14:16:14 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06 14:16:14 - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-08-06 14:16:14 - HHH000026: Second-level cache disabled
+2024-08-06 14:16:14 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06 14:16:14 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-06 14:16:15 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06 14:16:15 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 14:16:16 - Error setting bot's command list: Error executing org.telegram.telegrambots.meta.api.methods.commands.SetMyCommands query: [400] Bad Request: BOT_COMMAND_INVALID
+2024-08-06 14:16:16 - Unable to proxy interface-implementing method [public final org.telegram.telegrambots.bots.DefaultBotOptions org.telegram.telegrambots.bots.DefaultAbsSender.getOptions()] because it is marked as final, consider using interface-based JDK proxies instead.
+2024-08-06 14:16:16 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-06 14:16:16 - 2 mappings in 'requestMappingHandlerMapping'
+2024-08-06 14:16:16 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-08-06 14:16:16 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-08-06 14:16:16 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-08-06 14:16:17 - Tomcat started on port 8080 (http) with context path ''
+2024-08-06 14:16:17 - Started EnglishApp in 5.653 seconds (process running for 5.997)
+2024-08-06 14:16:26 - Message received: /start from chatId: 189377799
+2024-08-06 14:16:26 - Processing /start command
+2024-08-06 14:16:26 - User registered: User{id=1, chatId=189377799, firstName='Roman', lastName='Galkin', userName='garoma1989', registeredAt=2024-08-06 14:16:26.605}
+2024-08-06 14:16:26 - isLanguageSet отработал, язык не найден
+2024-08-06 14:16:28 - Сюда доходим 
+2024-08-06 14:16:28 - Callback data received: English
+2024-08-06 14:16:28 - setUserLanguage отработал
+2024-08-06 14:16:28 - User: User{id=1, chatId=189377799, firstName='Roman', lastName='Galkin', userName='garoma1989', registeredAt=2024-08-06 14:16:26.605}
+2024-08-06 14:16:28 - Language: Language(id=1, code=en, name=English)
+2024-08-06 14:16:28 - Saving UserLanguage: UserLanguage(id=null, user=User{id=1, chatId=189377799, firstName='Roman', lastName='Galkin', userName='garoma1989', registeredAt=2024-08-06 14:16:26.605}, language=Language(id=1, code=en, name=English))
+2024-08-06 14:16:28 - UserLanguage saved
+2024-08-06 14:16:28 - Message received:  язык установлен  from chatId: 189377799
+2024-08-06 14:17:13 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 14:17:13 - HikariPool-1 - Shutdown initiated...
+2024-08-06 14:17:13 - HikariPool-1 - Shutdown completed.
+2024-08-06 14:17:15 - Starting EnglishApp using Java 17.0.10 with PID 18940 (C:\Users\volga\IdeaProjects\EnglishApp\target\classes started by volga in C:\Users\volga\IdeaProjects\EnglishApp)
+2024-08-06 14:17:15 - Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-08-06 14:17:15 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 14:17:16 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06 14:17:16 - Finished Spring Data repository scanning in 59 ms. Found 5 JPA repository interfaces.
+2024-08-06 14:17:16 - Tomcat initialized with port 8080 (http)
+2024-08-06 14:17:16 - Starting service [Tomcat]
+2024-08-06 14:17:16 - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-08-06 14:17:17 - Initializing Spring embedded WebApplicationContext
+2024-08-06 14:17:17 - Root WebApplicationContext: initialization completed in 1249 ms
+2024-08-06 14:17:17 - HikariPool-1 - Starting...
+2024-08-06 14:17:17 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7e1ffe70
+2024-08-06 14:17:17 - HikariPool-1 - Start completed.
+2024-08-06 14:17:17 - Set default schema name to public
+2024-08-06 14:17:17 - Creating database history table with name: public.databasechangelog
+2024-08-06 14:17:17 - Reading from public.databasechangelog
+2024-08-06 14:17:17 - Successfully acquired change log lock
+2024-08-06 14:17:17 - Using deploymentId: 2939437921
+2024-08-06 14:17:17 - Reading from public.databasechangelog
+2024-08-06 14:17:17 - Running Changeset: db/changelog/changeset/create-users-table.yaml::create-users::your_name
+2024-08-06 14:17:17 - Table users created
+2024-08-06 14:17:17 - ChangeSet db/changelog/changeset/create-users-table.yaml::create-users::your_name ran successfully in 16ms
+2024-08-06 14:17:17 - Running Changeset: db/changelog/changeset/create-languages-table.yaml::create-languages-table::Galkin
+2024-08-06 14:17:17 - Table languages created
+2024-08-06 14:17:18 - Unique constraint added to languages(code, name)
+2024-08-06 14:17:18 - ChangeSet db/changelog/changeset/create-languages-table.yaml::create-languages-table::Galkin ran successfully in 24ms
+2024-08-06 14:17:18 - Running Changeset: db/changelog/changeset/create-user-languages-table.yaml::create-user-languages::your_name
+2024-08-06 14:17:18 - Table user_languages created
+2024-08-06 14:17:18 - Foreign key constraint added to user_languages (user_id)
+2024-08-06 14:17:18 - Foreign key constraint added to user_languages (language_id)
+2024-08-06 14:17:18 - Unique constraint added to user_languages(user_id, language_id)
+2024-08-06 14:17:18 - ChangeSet db/changelog/changeset/create-user-languages-table.yaml::create-user-languages::your_name ran successfully in 25ms
+2024-08-06 14:17:18 - Running Changeset: db/changelog/changeset/create-words-table.yaml::create-words-table::your_name
+2024-08-06 14:17:18 - Table words created
+2024-08-06 14:17:18 - ChangeSet db/changelog/changeset/create-words-table.yaml::create-words-table::your_name ran successfully in 13ms
+2024-08-06 14:17:18 - Running Changeset: db/changelog/changeset/create-user-words-table.yaml::create-user-words::your_name
+2024-08-06 14:17:18 - Table user_words created
+2024-08-06 14:17:18 - ChangeSet db/changelog/changeset/create-user-words-table.yaml::create-user-words::your_name ran successfully in 12ms
+2024-08-06 14:17:18 - UPDATE SUMMARY
+2024-08-06 14:17:18 - Run:                          5
+2024-08-06 14:17:18 - Previously run:               0
+2024-08-06 14:17:18 - Filtered out:                 0
+2024-08-06 14:17:18 - -------------------------------
+2024-08-06 14:17:18 - Total change sets:            5
+2024-08-06 14:17:18 - Update summary generated
+2024-08-06 14:17:18 - Update command completed successfully.
+2024-08-06 14:17:18 - Liquibase: Update has been successful. Rows affected: 5
+2024-08-06 14:17:18 - Successfully released change log lock
+2024-08-06 14:17:18 - Command execution complete
+2024-08-06 14:17:18 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06 14:17:18 - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-08-06 14:17:18 - HHH000026: Second-level cache disabled
+2024-08-06 14:17:18 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06 14:17:18 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-06 14:17:19 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06 14:17:19 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 14:17:20 - Error setting bot's command list: Error executing org.telegram.telegrambots.meta.api.methods.commands.SetMyCommands query: [400] Bad Request: BOT_COMMAND_INVALID
+2024-08-06 14:17:20 - Unable to proxy interface-implementing method [public final org.telegram.telegrambots.bots.DefaultBotOptions org.telegram.telegrambots.bots.DefaultAbsSender.getOptions()] because it is marked as final, consider using interface-based JDK proxies instead.
+2024-08-06 14:17:20 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-06 14:17:20 - 2 mappings in 'requestMappingHandlerMapping'
+2024-08-06 14:17:20 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-08-06 14:17:20 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-08-06 14:17:20 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-08-06 14:17:20 - Tomcat started on port 8080 (http) with context path ''
+2024-08-06 14:17:20 - Started EnglishApp in 5.587 seconds (process running for 5.925)
+2024-08-06 14:17:30 - Message received: /start from chatId: 189377799
+2024-08-06 14:17:30 - Processing /start command
+2024-08-06 14:17:30 - User registered: User{id=1, chatId=189377799, firstName='Roman', lastName='Galkin', userName='garoma1989', registeredAt=2024-08-06 14:17:30.27}
+2024-08-06 14:17:30 - isLanguageSet отработал, язык не найден
+2024-08-06 14:17:31 - Сюда доходим 
+2024-08-06 14:17:31 - Callback data received: English
+2024-08-06 14:17:31 - setUserLanguage отработал
+2024-08-06 14:17:31 - User: User{id=1, chatId=189377799, firstName='Roman', lastName='Galkin', userName='garoma1989', registeredAt=2024-08-06 14:17:30.27}
+2024-08-06 14:17:31 - Language: Language(id=1, code=en, name=English)
+2024-08-06 14:17:31 - Saving UserLanguage: UserLanguage(id=null, user=User{id=1, chatId=189377799, firstName='Roman', lastName='Galkin', userName='garoma1989', registeredAt=2024-08-06 14:17:30.27}, language=Language(id=1, code=en, name=English))
+2024-08-06 14:17:31 - UserLanguage saved
+2024-08-06 14:17:31 - Message received:  язык установлен  from chatId: 189377799
+2024-08-06 14:42:29 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 14:42:29 - HikariPool-1 - Shutdown initiated...
+2024-08-06 14:42:29 - HikariPool-1 - Shutdown completed.
+2024-08-06 14:43:03 - Starting EnglishApp using Java 17.0.10 with PID 1484 (C:\Users\volga\IdeaProjects\EnglishApp\target\classes started by volga in C:\Users\volga\IdeaProjects\EnglishApp)
+2024-08-06 14:43:03 - Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-08-06 14:43:03 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 14:43:03 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06 14:43:03 - Finished Spring Data repository scanning in 60 ms. Found 5 JPA repository interfaces.
+2024-08-06 14:43:04 - Tomcat initialized with port 8080 (http)
+2024-08-06 14:43:04 - Starting service [Tomcat]
+2024-08-06 14:43:04 - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-08-06 14:43:04 - Initializing Spring embedded WebApplicationContext
+2024-08-06 14:43:04 - Root WebApplicationContext: initialization completed in 1201 ms
+2024-08-06 14:43:04 - HikariPool-1 - Starting...
+2024-08-06 14:43:04 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1536ea40
+2024-08-06 14:43:04 - HikariPool-1 - Start completed.
+2024-08-06 14:43:04 - Set default schema name to public
+2024-08-06 14:43:05 - Creating database history table with name: public.databasechangelog
+2024-08-06 14:43:05 - Reading from public.databasechangelog
+2024-08-06 14:43:05 - Successfully acquired change log lock
+2024-08-06 14:43:05 - Using deploymentId: 2940985281
+2024-08-06 14:43:05 - Reading from public.databasechangelog
+2024-08-06 14:43:05 - Running Changeset: db/changelog/changeset/create-users-table.yaml::create-users::your_name
+2024-08-06 14:43:05 - Table users created
+2024-08-06 14:43:05 - ChangeSet db/changelog/changeset/create-users-table.yaml::create-users::your_name ran successfully in 19ms
+2024-08-06 14:43:05 - Running Changeset: db/changelog/changeset/create-languages-table.yaml::create-languages-table::Galkin
+2024-08-06 14:43:05 - Table languages created
+2024-08-06 14:43:05 - Unique constraint added to languages(code, name)
+2024-08-06 14:43:05 - ChangeSet db/changelog/changeset/create-languages-table.yaml::create-languages-table::Galkin ran successfully in 34ms
+2024-08-06 14:43:05 - Running Changeset: db/changelog/changeset/create-user-languages-table.yaml::create-user-languages::your_name
+2024-08-06 14:43:05 - Table user_languages created
+2024-08-06 14:43:05 - Foreign key constraint added to user_languages (user_id)
+2024-08-06 14:43:05 - Foreign key constraint added to user_languages (language_id)
+2024-08-06 14:43:05 - Unique constraint added to user_languages(user_id, language_id)
+2024-08-06 14:43:05 - ChangeSet db/changelog/changeset/create-user-languages-table.yaml::create-user-languages::your_name ran successfully in 27ms
+2024-08-06 14:43:05 - Running Changeset: db/changelog/changeset/create-words-table.yaml::create-words-table::your_name
+2024-08-06 14:43:05 - Table words created
+2024-08-06 14:43:05 - Unique constraint added to words(language_id, word, user_id)
+2024-08-06 14:43:05 - ChangeSet db/changelog/changeset/create-words-table.yaml::create-words-table::your_name ran successfully in 24ms
+2024-08-06 14:43:05 - Running Changeset: db/changelog/changeset/create-user-words-table.yaml::create-user-words::your_name
+2024-08-06 14:43:05 - Table user_words created
+2024-08-06 14:43:05 - ChangeSet db/changelog/changeset/create-user-words-table.yaml::create-user-words::your_name ran successfully in 10ms
+2024-08-06 14:43:05 - UPDATE SUMMARY
+2024-08-06 14:43:05 - Run:                          5
+2024-08-06 14:43:05 - Previously run:               0
+2024-08-06 14:43:05 - Filtered out:                 0
+2024-08-06 14:43:05 - -------------------------------
+2024-08-06 14:43:05 - Total change sets:            5
+2024-08-06 14:43:05 - Update summary generated
+2024-08-06 14:43:05 - Update command completed successfully.
+2024-08-06 14:43:05 - Liquibase: Update has been successful. Rows affected: 5
+2024-08-06 14:43:05 - Successfully released change log lock
+2024-08-06 14:43:05 - Command execution complete
+2024-08-06 14:43:05 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06 14:43:05 - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-08-06 14:43:05 - HHH000026: Second-level cache disabled
+2024-08-06 14:43:05 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06 14:43:05 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-06 14:43:06 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06 14:43:06 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 14:43:07 - Error setting bot's command list: Error executing org.telegram.telegrambots.meta.api.methods.commands.SetMyCommands query: [400] Bad Request: BOT_COMMAND_INVALID
+2024-08-06 14:43:07 - Unable to proxy interface-implementing method [public final org.telegram.telegrambots.bots.DefaultBotOptions org.telegram.telegrambots.bots.DefaultAbsSender.getOptions()] because it is marked as final, consider using interface-based JDK proxies instead.
+2024-08-06 14:43:07 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-06 14:43:07 - 2 mappings in 'requestMappingHandlerMapping'
+2024-08-06 14:43:07 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-08-06 14:43:08 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-08-06 14:43:08 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-08-06 14:43:08 - Tomcat started on port 8080 (http) with context path ''
+2024-08-06 14:43:08 - Started EnglishApp in 5.575 seconds (process running for 5.914)
+2024-08-06 14:43:11 - Message received: /start from chatId: 189377799
+2024-08-06 14:43:11 - Processing /start command
+2024-08-06 14:43:11 - User registered: User{id=1, chatId=189377799, firstName='Roman', lastName='Galkin', userName='garoma1989', registeredAt=2024-08-06 14:43:11.692}
+2024-08-06 14:43:11 - isLanguageSet отработал, язык не найден
+2024-08-06 14:43:13 - Сюда доходим 
+2024-08-06 14:43:13 - Callback data received: English
+2024-08-06 14:43:13 - setUserLanguage отработал
+2024-08-06 14:43:13 - User: User{id=1, chatId=189377799, firstName='Roman', lastName='Galkin', userName='garoma1989', registeredAt=2024-08-06 14:43:11.692}
+2024-08-06 14:43:13 - Language: Language(id=1, code=en, name=English)
+2024-08-06 14:43:13 - Saving UserLanguage: UserLanguage(id=null, user=User{id=1, chatId=189377799, firstName='Roman', lastName='Galkin', userName='garoma1989', registeredAt=2024-08-06 14:43:11.692}, language=Language(id=1, code=en, name=English))
+2024-08-06 14:43:13 - UserLanguage saved
+2024-08-06 14:43:13 - Message received:  язык установлен  from chatId: 189377799
+2024-08-06 16:09:28 - Read timed out
+java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:288)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:314)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1065)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+2024-08-06 16:09:29 - Этот хост неизвестен (api.telegram.org)
+java.net.UnknownHostException: Этот хост неизвестен (api.telegram.org)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+2024-08-06 16:09:29 - api.telegram.org
+java.net.UnknownHostException: api.telegram.org
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+2024-08-06 16:09:30 - api.telegram.org
+java.net.UnknownHostException: api.telegram.org
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+2024-08-06 16:09:32 - api.telegram.org
+java.net.UnknownHostException: api.telegram.org
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+2024-08-06 16:09:33 - api.telegram.org
+java.net.UnknownHostException: api.telegram.org
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+2024-08-06 16:09:35 - api.telegram.org
+java.net.UnknownHostException: api.telegram.org
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+2024-08-06 16:09:37 - api.telegram.org
+java.net.UnknownHostException: api.telegram.org
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+2024-08-06 16:09:40 - Этот хост неизвестен (api.telegram.org)
+java.net.UnknownHostException: Этот хост неизвестен (api.telegram.org)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+2024-08-06 16:09:48 - api.telegram.org
+java.net.UnknownHostException: api.telegram.org
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+2024-08-06 16:09:57 - Этот хост неизвестен (api.telegram.org)
+java.net.UnknownHostException: Этот хост неизвестен (api.telegram.org)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+2024-08-06 16:10:12 - Этот хост неизвестен (api.telegram.org)
+java.net.UnknownHostException: Этот хост неизвестен (api.telegram.org)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+2024-08-06 16:10:32 - Этот хост неизвестен (api.telegram.org)
+java.net.UnknownHostException: Этот хост неизвестен (api.telegram.org)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+2024-08-06 16:11:16 - Этот хост неизвестен (api.telegram.org)
+java.net.UnknownHostException: Этот хост неизвестен (api.telegram.org)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+2024-08-06 16:12:17 - Этот хост неизвестен (api.telegram.org)
+java.net.UnknownHostException: Этот хост неизвестен (api.telegram.org)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+2024-08-06 16:13:11 - Этот хост неизвестен (api.telegram.org)
+java.net.UnknownHostException: Этот хост неизвестен (api.telegram.org)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+2024-08-06 16:15:16 - Этот хост неизвестен (api.telegram.org)
+java.net.UnknownHostException: Этот хост неизвестен (api.telegram.org)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+2024-08-06 16:19:44 - Этот хост неизвестен (api.telegram.org)
+java.net.UnknownHostException: Этот хост неизвестен (api.telegram.org)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+2024-08-06 16:41:59 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m23s499ms767µs900ns).
+2024-08-06 16:44:06 - Этот хост неизвестен (api.telegram.org)
+java.net.UnknownHostException: Этот хост неизвестен (api.telegram.org)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+2024-08-06 16:51:59 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 16:51:59 - HikariPool-1 - Shutdown initiated...
+2024-08-06 16:51:59 - HikariPool-1 - Shutdown completed.
+2024-08-06 16:52:06 - Starting EnglishApp using Java 17.0.10 with PID 18132 (C:\Users\volga\IdeaProjects\EnglishApp\target\classes started by volga in C:\Users\volga\IdeaProjects\EnglishApp)
+2024-08-06 16:52:06 - Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-08-06 16:52:06 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 16:52:07 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06 16:52:07 - Finished Spring Data repository scanning in 81 ms. Found 5 JPA repository interfaces.
+2024-08-06 16:52:07 - Tomcat initialized with port 8080 (http)
+2024-08-06 16:52:07 - Starting service [Tomcat]
+2024-08-06 16:52:07 - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-08-06 16:52:08 - Initializing Spring embedded WebApplicationContext
+2024-08-06 16:52:08 - Root WebApplicationContext: initialization completed in 1307 ms
+2024-08-06 16:52:08 - HikariPool-1 - Starting...
+2024-08-06 16:52:08 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3d620a1
+2024-08-06 16:52:08 - HikariPool-1 - Start completed.
+2024-08-06 16:52:08 - Set default schema name to public
+2024-08-06 16:52:08 - Reading from public.databasechangelog
+2024-08-06 16:52:08 - Database is up to date, no changesets to execute
+2024-08-06 16:52:08 - Reading from public.databasechangelog
+2024-08-06 16:52:08 - UPDATE SUMMARY
+2024-08-06 16:52:08 - Run:                          0
+2024-08-06 16:52:08 - Previously run:               5
+2024-08-06 16:52:08 - Filtered out:                 0
+2024-08-06 16:52:08 - -------------------------------
+2024-08-06 16:52:08 - Total change sets:            5
+2024-08-06 16:52:08 - Update summary generated
+2024-08-06 16:52:08 - Successfully released change log lock
+2024-08-06 16:52:08 - Command execution complete
+2024-08-06 16:52:08 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06 16:52:09 - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-08-06 16:52:09 - HHH000026: Second-level cache disabled
+2024-08-06 16:52:09 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06 16:52:09 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-06 16:52:10 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06 16:52:10 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 16:52:10 - Error setting bot's command list: Unable to execute setMyCommands method
+2024-08-06 16:52:10 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-06 16:52:11 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'addWordService': Unsatisfied dependency expressed through field 'userState': No qualifying bean of type 'com.crud.myEnglishApp.utils.UserState' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-08-06 16:52:11 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 16:52:11 - HikariPool-1 - Shutdown initiated...
+2024-08-06 16:52:11 - HikariPool-1 - Shutdown completed.
+2024-08-06 16:52:11 - Stopping service [Tomcat]
+2024-08-06 16:52:11 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-06 16:52:11 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userState in com.crud.myEnglishApp.services.AddWordService required a bean of type 'com.crud.myEnglishApp.utils.UserState' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.crud.myEnglishApp.utils.UserState' in your configuration.
+
+2024-08-06 16:53:22 - Starting EnglishApp using Java 17.0.10 with PID 7744 (C:\Users\volga\IdeaProjects\EnglishApp\target\classes started by volga in C:\Users\volga\IdeaProjects\EnglishApp)
+2024-08-06 16:53:22 - Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-08-06 16:53:22 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 16:53:22 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06 16:53:22 - Finished Spring Data repository scanning in 55 ms. Found 5 JPA repository interfaces.
+2024-08-06 16:53:23 - Tomcat initialized with port 8080 (http)
+2024-08-06 16:53:23 - Starting service [Tomcat]
+2024-08-06 16:53:23 - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-08-06 16:53:23 - Initializing Spring embedded WebApplicationContext
+2024-08-06 16:53:23 - Root WebApplicationContext: initialization completed in 1214 ms
+2024-08-06 16:53:23 - HikariPool-1 - Starting...
+2024-08-06 16:53:23 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4cc65c2
+2024-08-06 16:53:23 - HikariPool-1 - Start completed.
+2024-08-06 16:53:23 - Set default schema name to public
+2024-08-06 16:53:24 - Reading from public.databasechangelog
+2024-08-06 16:53:24 - Database is up to date, no changesets to execute
+2024-08-06 16:53:24 - Reading from public.databasechangelog
+2024-08-06 16:53:24 - UPDATE SUMMARY
+2024-08-06 16:53:24 - Run:                          0
+2024-08-06 16:53:24 - Previously run:               5
+2024-08-06 16:53:24 - Filtered out:                 0
+2024-08-06 16:53:24 - -------------------------------
+2024-08-06 16:53:24 - Total change sets:            5
+2024-08-06 16:53:24 - Update summary generated
+2024-08-06 16:53:24 - Successfully released change log lock
+2024-08-06 16:53:24 - Command execution complete
+2024-08-06 16:53:24 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06 16:53:24 - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-08-06 16:53:24 - HHH000026: Second-level cache disabled
+2024-08-06 16:53:24 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06 16:53:24 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-06 16:53:25 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06 16:53:25 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 16:53:25 - Error setting bot's command list: Unable to execute setMyCommands method
+2024-08-06 16:53:25 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-06 16:53:26 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'addWordService': Unsatisfied dependency expressed through field 'userState': No qualifying bean of type 'com.crud.myEnglishApp.utils.UserState' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-08-06 16:53:26 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 16:53:26 - HikariPool-1 - Shutdown initiated...
+2024-08-06 16:53:26 - HikariPool-1 - Shutdown completed.
+2024-08-06 16:53:26 - Stopping service [Tomcat]
+2024-08-06 16:53:26 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-06 16:53:26 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userState in com.crud.myEnglishApp.services.AddWordService required a bean of type 'com.crud.myEnglishApp.utils.UserState' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.crud.myEnglishApp.utils.UserState' in your configuration.
+
+2024-08-06 16:56:29 - Starting EnglishApp using Java 17.0.10 with PID 8348 (C:\Users\volga\IdeaProjects\EnglishApp\target\classes started by volga in C:\Users\volga\IdeaProjects\EnglishApp)
+2024-08-06 16:56:29 - Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-08-06 16:56:29 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 16:56:30 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06 16:56:30 - Finished Spring Data repository scanning in 55 ms. Found 5 JPA repository interfaces.
+2024-08-06 16:56:31 - Tomcat initialized with port 8080 (http)
+2024-08-06 16:56:31 - Starting service [Tomcat]
+2024-08-06 16:56:31 - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-08-06 16:56:31 - Initializing Spring embedded WebApplicationContext
+2024-08-06 16:56:31 - Root WebApplicationContext: initialization completed in 1266 ms
+2024-08-06 16:56:31 - HikariPool-1 - Starting...
+2024-08-06 16:56:31 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@14447be
+2024-08-06 16:56:31 - HikariPool-1 - Start completed.
+2024-08-06 16:56:31 - Set default schema name to public
+2024-08-06 16:56:32 - Reading from public.databasechangelog
+2024-08-06 16:56:32 - Database is up to date, no changesets to execute
+2024-08-06 16:56:32 - Reading from public.databasechangelog
+2024-08-06 16:56:32 - UPDATE SUMMARY
+2024-08-06 16:56:32 - Run:                          0
+2024-08-06 16:56:32 - Previously run:               5
+2024-08-06 16:56:32 - Filtered out:                 0
+2024-08-06 16:56:32 - -------------------------------
+2024-08-06 16:56:32 - Total change sets:            5
+2024-08-06 16:56:32 - Update summary generated
+2024-08-06 16:56:32 - Successfully released change log lock
+2024-08-06 16:56:32 - Command execution complete
+2024-08-06 16:56:32 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06 16:56:32 - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-08-06 16:56:32 - HHH000026: Second-level cache disabled
+2024-08-06 16:56:32 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06 16:56:32 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-06 16:56:33 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06 16:56:33 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 16:56:34 - Error setting bot's command list: Error executing org.telegram.telegrambots.meta.api.methods.commands.SetMyCommands query: [400] Bad Request: BOT_COMMAND_INVALID
+2024-08-06 16:56:34 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-06 16:56:34 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-06 16:56:34 - 2 mappings in 'requestMappingHandlerMapping'
+2024-08-06 16:56:35 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-08-06 16:56:35 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-08-06 16:56:35 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-08-06 16:56:35 - Tomcat started on port 8080 (http) with context path ''
+2024-08-06 16:56:35 - Started EnglishApp in 5.794 seconds (process running for 6.147)
+2024-08-06 16:58:32 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 16:58:32 - HikariPool-1 - Shutdown initiated...
+2024-08-06 16:58:32 - HikariPool-1 - Shutdown completed.
+2024-08-06 16:58:35 - Starting EnglishApp using Java 17.0.10 with PID 7448 (C:\Users\volga\IdeaProjects\EnglishApp\target\classes started by volga in C:\Users\volga\IdeaProjects\EnglishApp)
+2024-08-06 16:58:35 - Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-08-06 16:58:35 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 16:58:36 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06 16:58:36 - Finished Spring Data repository scanning in 61 ms. Found 5 JPA repository interfaces.
+2024-08-06 16:58:36 - Tomcat initialized with port 8080 (http)
+2024-08-06 16:58:36 - Starting service [Tomcat]
+2024-08-06 16:58:36 - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-08-06 16:58:36 - Initializing Spring embedded WebApplicationContext
+2024-08-06 16:58:36 - Root WebApplicationContext: initialization completed in 1220 ms
+2024-08-06 16:58:37 - HikariPool-1 - Starting...
+2024-08-06 16:58:37 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4bc59b27
+2024-08-06 16:58:37 - HikariPool-1 - Start completed.
+2024-08-06 16:58:37 - Set default schema name to public
+2024-08-06 16:58:37 - Creating database history table with name: public.databasechangelog
+2024-08-06 16:58:37 - Reading from public.databasechangelog
+2024-08-06 16:58:37 - Successfully acquired change log lock
+2024-08-06 16:58:37 - Using deploymentId: 2949117847
+2024-08-06 16:58:37 - Reading from public.databasechangelog
+2024-08-06 16:58:37 - Running Changeset: db/changelog/changeset/create-users-table.yaml::create-users::your_name
+2024-08-06 16:58:37 - Table users created
+2024-08-06 16:58:37 - ChangeSet db/changelog/changeset/create-users-table.yaml::create-users::your_name ran successfully in 22ms
+2024-08-06 16:58:37 - Running Changeset: db/changelog/changeset/create-languages-table.yaml::create-languages-table::Galkin
+2024-08-06 16:58:37 - Table languages created
+2024-08-06 16:58:37 - Unique constraint added to languages(code, name)
+2024-08-06 16:58:37 - ChangeSet db/changelog/changeset/create-languages-table.yaml::create-languages-table::Galkin ran successfully in 23ms
+2024-08-06 16:58:37 - Running Changeset: db/changelog/changeset/create-user-languages-table.yaml::create-user-languages::your_name
+2024-08-06 16:58:37 - Table user_languages created
+2024-08-06 16:58:37 - Foreign key constraint added to user_languages (user_id)
+2024-08-06 16:58:37 - Foreign key constraint added to user_languages (language_id)
+2024-08-06 16:58:37 - Unique constraint added to user_languages(user_id, language_id)
+2024-08-06 16:58:37 - ChangeSet db/changelog/changeset/create-user-languages-table.yaml::create-user-languages::your_name ran successfully in 31ms
+2024-08-06 16:58:37 - Running Changeset: db/changelog/changeset/create-words-table.yaml::create-words-table::your_name
+2024-08-06 16:58:38 - Table words created
+2024-08-06 16:58:38 - Unique constraint added to words(language_id, word, user_id)
+2024-08-06 16:58:38 - ChangeSet db/changelog/changeset/create-words-table.yaml::create-words-table::your_name ran successfully in 32ms
+2024-08-06 16:58:38 - Running Changeset: db/changelog/changeset/create-user-words-table.yaml::create-user-words::your_name
+2024-08-06 16:58:38 - Table user_words created
+2024-08-06 16:58:38 - ChangeSet db/changelog/changeset/create-user-words-table.yaml::create-user-words::your_name ran successfully in 16ms
+2024-08-06 16:58:38 - UPDATE SUMMARY
+2024-08-06 16:58:38 - Run:                          5
+2024-08-06 16:58:38 - Previously run:               0
+2024-08-06 16:58:38 - Filtered out:                 0
+2024-08-06 16:58:38 - -------------------------------
+2024-08-06 16:58:38 - Total change sets:            5
+2024-08-06 16:58:38 - Update summary generated
+2024-08-06 16:58:38 - Update command completed successfully.
+2024-08-06 16:58:38 - Liquibase: Update has been successful. Rows affected: 5
+2024-08-06 16:58:38 - Successfully released change log lock
+2024-08-06 16:58:38 - Command execution complete
+2024-08-06 16:58:38 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06 16:58:38 - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-08-06 16:58:38 - HHH000026: Second-level cache disabled
+2024-08-06 16:58:38 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06 16:58:38 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-06 16:58:39 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06 16:58:39 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 16:58:40 - Error setting bot's command list: Error executing org.telegram.telegrambots.meta.api.methods.commands.SetMyCommands query: [400] Bad Request: BOT_COMMAND_INVALID
+2024-08-06 16:58:40 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-06 16:58:40 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-06 16:58:40 - 2 mappings in 'requestMappingHandlerMapping'
+2024-08-06 16:58:41 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-08-06 16:58:41 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-08-06 16:58:41 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-08-06 16:58:41 - Tomcat started on port 8080 (http) with context path ''
+2024-08-06 16:58:41 - Started EnglishApp in 6.259 seconds (process running for 6.605)
+2024-08-06 17:00:47 - Message received: /start from chatId: 189377799
+2024-08-06 17:00:47 - Processing /start command
+2024-08-06 17:00:47 - User registered: User{id=1, chatId=189377799, firstName='Roman', lastName='Galkin', userName='garoma1989', registeredAt=2024-08-06 17:00:47.089}
+2024-08-06 17:03:36 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 17:03:36 - HikariPool-1 - Shutdown initiated...
+2024-08-06 17:03:36 - HikariPool-1 - Shutdown completed.
+2024-08-06 17:03:40 - Starting EnglishApp using Java 17.0.10 with PID 20764 (C:\Users\volga\IdeaProjects\EnglishApp\target\classes started by volga in C:\Users\volga\IdeaProjects\EnglishApp)
+2024-08-06 17:03:40 - Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-08-06 17:03:40 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:03:40 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06 17:03:40 - Finished Spring Data repository scanning in 66 ms. Found 5 JPA repository interfaces.
+2024-08-06 17:03:41 - Tomcat initialized with port 8080 (http)
+2024-08-06 17:03:41 - Starting service [Tomcat]
+2024-08-06 17:03:41 - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-08-06 17:03:41 - Initializing Spring embedded WebApplicationContext
+2024-08-06 17:03:41 - Root WebApplicationContext: initialization completed in 1411 ms
+2024-08-06 17:03:41 - HikariPool-1 - Starting...
+2024-08-06 17:03:41 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@51e3d37e
+2024-08-06 17:03:41 - HikariPool-1 - Start completed.
+2024-08-06 17:03:42 - Set default schema name to public
+2024-08-06 17:03:42 - Reading from public.databasechangelog
+2024-08-06 17:03:42 - Database is up to date, no changesets to execute
+2024-08-06 17:03:42 - Reading from public.databasechangelog
+2024-08-06 17:03:42 - UPDATE SUMMARY
+2024-08-06 17:03:42 - Run:                          0
+2024-08-06 17:03:42 - Previously run:               5
+2024-08-06 17:03:42 - Filtered out:                 0
+2024-08-06 17:03:42 - -------------------------------
+2024-08-06 17:03:42 - Total change sets:            5
+2024-08-06 17:03:42 - Update summary generated
+2024-08-06 17:03:42 - Successfully released change log lock
+2024-08-06 17:03:42 - Command execution complete
+2024-08-06 17:03:42 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06 17:03:42 - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-08-06 17:03:42 - HHH000026: Second-level cache disabled
+2024-08-06 17:03:42 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06 17:03:43 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-06 17:03:43 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06 17:03:43 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 17:03:44 - Error setting bot's command list: Error executing org.telegram.telegrambots.meta.api.methods.commands.SetMyCommands query: [400] Bad Request: BOT_COMMAND_INVALID
+2024-08-06 17:03:44 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-06 17:03:45 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-06 17:03:45 - 2 mappings in 'requestMappingHandlerMapping'
+2024-08-06 17:03:45 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-08-06 17:03:45 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-08-06 17:03:45 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-08-06 17:03:45 - Tomcat started on port 8080 (http) with context path ''
+2024-08-06 17:03:45 - Started EnglishApp in 5.924 seconds (process running for 6.298)
+2024-08-06 17:03:58 - Message received: /start from chatId: 189377799
+2024-08-06 17:03:58 - Processing /start command
+2024-08-06 17:03:58 - User with username 'garoma1989' already exists.
+2024-08-06 17:04:33 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 17:04:33 - HikariPool-1 - Shutdown initiated...
+2024-08-06 17:04:33 - HikariPool-1 - Shutdown completed.
+2024-08-06 17:04:35 - Starting EnglishApp using Java 17.0.10 with PID 19044 (C:\Users\volga\IdeaProjects\EnglishApp\target\classes started by volga in C:\Users\volga\IdeaProjects\EnglishApp)
+2024-08-06 17:04:35 - Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-08-06 17:04:35 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:04:35 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06 17:04:35 - Finished Spring Data repository scanning in 62 ms. Found 5 JPA repository interfaces.
+2024-08-06 17:04:36 - Tomcat initialized with port 8080 (http)
+2024-08-06 17:04:36 - Starting service [Tomcat]
+2024-08-06 17:04:36 - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-08-06 17:04:36 - Initializing Spring embedded WebApplicationContext
+2024-08-06 17:04:36 - Root WebApplicationContext: initialization completed in 1226 ms
+2024-08-06 17:04:36 - HikariPool-1 - Starting...
+2024-08-06 17:04:36 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1da1380b
+2024-08-06 17:04:36 - HikariPool-1 - Start completed.
+2024-08-06 17:04:36 - Set default schema name to public
+2024-08-06 17:04:37 - Creating database history table with name: public.databasechangelog
+2024-08-06 17:04:37 - Reading from public.databasechangelog
+2024-08-06 17:04:37 - Successfully acquired change log lock
+2024-08-06 17:04:37 - Using deploymentId: 2949477406
+2024-08-06 17:04:37 - Reading from public.databasechangelog
+2024-08-06 17:04:37 - Running Changeset: db/changelog/changeset/create-users-table.yaml::create-users::your_name
+2024-08-06 17:04:37 - Table users created
+2024-08-06 17:04:37 - ChangeSet db/changelog/changeset/create-users-table.yaml::create-users::your_name ran successfully in 22ms
+2024-08-06 17:04:37 - Running Changeset: db/changelog/changeset/create-languages-table.yaml::create-languages-table::Galkin
+2024-08-06 17:04:37 - Table languages created
+2024-08-06 17:04:37 - Unique constraint added to languages(code, name)
+2024-08-06 17:04:37 - ChangeSet db/changelog/changeset/create-languages-table.yaml::create-languages-table::Galkin ran successfully in 26ms
+2024-08-06 17:04:37 - Running Changeset: db/changelog/changeset/create-user-languages-table.yaml::create-user-languages::your_name
+2024-08-06 17:04:37 - Table user_languages created
+2024-08-06 17:04:37 - Foreign key constraint added to user_languages (user_id)
+2024-08-06 17:04:37 - Foreign key constraint added to user_languages (language_id)
+2024-08-06 17:04:37 - Unique constraint added to user_languages(user_id, language_id)
+2024-08-06 17:04:37 - ChangeSet db/changelog/changeset/create-user-languages-table.yaml::create-user-languages::your_name ran successfully in 27ms
+2024-08-06 17:04:37 - Running Changeset: db/changelog/changeset/create-words-table.yaml::create-words-table::your_name
+2024-08-06 17:04:37 - Table words created
+2024-08-06 17:04:37 - Unique constraint added to words(language_id, word, user_id)
+2024-08-06 17:04:37 - ChangeSet db/changelog/changeset/create-words-table.yaml::create-words-table::your_name ran successfully in 24ms
+2024-08-06 17:04:37 - Running Changeset: db/changelog/changeset/create-user-words-table.yaml::create-user-words::your_name
+2024-08-06 17:04:37 - Table user_words created
+2024-08-06 17:04:37 - ChangeSet db/changelog/changeset/create-user-words-table.yaml::create-user-words::your_name ran successfully in 12ms
+2024-08-06 17:04:37 - UPDATE SUMMARY
+2024-08-06 17:04:37 - Run:                          5
+2024-08-06 17:04:37 - Previously run:               0
+2024-08-06 17:04:37 - Filtered out:                 0
+2024-08-06 17:04:37 - -------------------------------
+2024-08-06 17:04:37 - Total change sets:            5
+2024-08-06 17:04:37 - Update summary generated
+2024-08-06 17:04:37 - Update command completed successfully.
+2024-08-06 17:04:37 - Liquibase: Update has been successful. Rows affected: 5
+2024-08-06 17:04:37 - Successfully released change log lock
+2024-08-06 17:04:37 - Command execution complete
+2024-08-06 17:04:37 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06 17:04:37 - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-08-06 17:04:37 - HHH000026: Second-level cache disabled
+2024-08-06 17:04:38 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06 17:04:38 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-06 17:04:38 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06 17:04:38 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 17:04:39 - Error setting bot's command list: Error executing org.telegram.telegrambots.meta.api.methods.commands.SetMyCommands query: [400] Bad Request: BOT_COMMAND_INVALID
+2024-08-06 17:04:39 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-06 17:04:40 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-06 17:04:40 - 2 mappings in 'requestMappingHandlerMapping'
+2024-08-06 17:04:40 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-08-06 17:04:40 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-08-06 17:04:40 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-08-06 17:04:40 - Tomcat started on port 8080 (http) with context path ''
+2024-08-06 17:04:40 - Started EnglishApp in 5.993 seconds (process running for 6.374)
+2024-08-06 17:04:43 - Message received: /start from chatId: 189377799
+2024-08-06 17:04:43 - Processing /start command
+2024-08-06 17:04:43 - User registered: User{id=1, chatId=189377799, firstName='Roman', lastName='Galkin', userName='garoma1989', registeredAt=2024-08-06 17:04:43.651}
+2024-08-06 17:15:29 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 17:15:29 - HikariPool-1 - Shutdown initiated...
+2024-08-06 17:15:29 - HikariPool-1 - Shutdown completed.
+2024-08-06 17:15:33 - Starting EnglishApp using Java 17.0.10 with PID 9760 (C:\Users\volga\IdeaProjects\EnglishApp\target\classes started by volga in C:\Users\volga\IdeaProjects\EnglishApp)
+2024-08-06 17:15:33 - Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-08-06 17:15:33 - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 17:15:34 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06 17:15:34 - Finished Spring Data repository scanning in 68 ms. Found 5 JPA repository interfaces.
+2024-08-06 17:15:35 - Tomcat initialized with port 8080 (http)
+2024-08-06 17:15:35 - Starting service [Tomcat]
+2024-08-06 17:15:35 - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-08-06 17:15:35 - Initializing Spring embedded WebApplicationContext
+2024-08-06 17:15:35 - Root WebApplicationContext: initialization completed in 1443 ms
+2024-08-06 17:15:35 - HikariPool-1 - Starting...
+2024-08-06 17:15:35 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4bc59b27
+2024-08-06 17:15:35 - HikariPool-1 - Start completed.
+2024-08-06 17:15:35 - Set default schema name to public
+2024-08-06 17:15:36 - Reading from public.databasechangelog
+2024-08-06 17:15:36 - Database is up to date, no changesets to execute
+2024-08-06 17:15:36 - Reading from public.databasechangelog
+2024-08-06 17:15:36 - UPDATE SUMMARY
+2024-08-06 17:15:36 - Run:                          0
+2024-08-06 17:15:36 - Previously run:               5
+2024-08-06 17:15:36 - Filtered out:                 0
+2024-08-06 17:15:36 - -------------------------------
+2024-08-06 17:15:36 - Total change sets:            5
+2024-08-06 17:15:36 - Update summary generated
+2024-08-06 17:15:36 - Successfully released change log lock
+2024-08-06 17:15:36 - Command execution complete
+2024-08-06 17:15:36 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06 17:15:36 - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-08-06 17:15:36 - HHH000026: Second-level cache disabled
+2024-08-06 17:15:36 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06 17:15:36 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-06 17:15:37 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06 17:15:37 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 17:15:38 - Error setting bot's command list: Error executing org.telegram.telegrambots.meta.api.methods.commands.SetMyCommands query: [400] Bad Request: BOT_COMMAND_INVALID
+2024-08-06 17:15:38 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-06 17:15:38 - Unable to proxy interface-implementing method [public final org.telegram.telegrambots.bots.DefaultBotOptions org.telegram.telegrambots.bots.DefaultAbsSender.getOptions()] because it is marked as final, consider using interface-based JDK proxies instead.
+2024-08-06 17:15:38 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-06 17:15:39 - 2 mappings in 'requestMappingHandlerMapping'
+2024-08-06 17:15:39 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-08-06 17:15:39 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-08-06 17:15:39 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-08-06 17:15:39 - Tomcat started on port 8080 (http) with context path ''
+2024-08-06 17:15:39 - Started EnglishApp in 6.074 seconds (process running for 6.593)
+2024-08-06 17:15:42 - Message received: /start from chatId: 189377799
+2024-08-06 17:15:42 - Processing /start command
+2024-08-06 17:15:42 - User with username 'garoma1989' already exists.
+2024-08-06 17:15:42 - Failed to send message: 
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [404] Not Found
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54)
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:34)
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:20)
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:15)
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1182)
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:61)
+	at com.crud.myEnglishApp.services.RegistrationService.executeMessage(RegistrationService.java:171)
+	at com.crud.myEnglishApp.services.RegistrationService.prepareAndSendMessage(RegistrationService.java:166)
+	at com.crud.myEnglishApp.services.RegistrationService.registerUserFromStartCommand(RegistrationService.java:70)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:713)
+	at com.crud.myEnglishApp.services.RegistrationService$$SpringCGLIB$$0.registerUserFromStartCommand(<generated>)
+	at com.crud.myEnglishApp.services.TelegramBot.onUpdateReceived(TelegramBot.java:83)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
+	at com.crud.myEnglishApp.services.TelegramBot.onUpdatesReceived(TelegramBot.java:121)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312)
+2024-08-06 17:15:42 - isLanguageSet отработал, язык не найден
+2024-08-06 17:15:42 - Failed to send message: 
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [404] Not Found
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54)
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:34)
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:20)
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:15)
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1182)
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:61)
+	at com.crud.myEnglishApp.services.RegistrationService.executeMessage(RegistrationService.java:171)
+	at com.crud.myEnglishApp.services.RegistrationService.chooselanguage(RegistrationService.java:159)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:713)
+	at com.crud.myEnglishApp.services.RegistrationService$$SpringCGLIB$$0.chooselanguage(<generated>)
+	at com.crud.myEnglishApp.services.TelegramBot.onUpdateReceived(TelegramBot.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
+	at com.crud.myEnglishApp.services.TelegramBot.onUpdatesReceived(TelegramBot.java:121)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312)
+2024-08-06 18:23:38 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=39m2s196ms999µs800ns).

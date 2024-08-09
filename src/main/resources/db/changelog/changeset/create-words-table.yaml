@@ -1,0 +1,93 @@
+#databaseChangeLog:
+#  - changeSet:
+#      id: create-words-table
+#      author: your_name
+#      changes:
+#        - createTable:
+#            tableName: words
+#            columns:
+#              - column:
+#                  name: id
+#                  type: bigint
+#                  autoIncrement: true
+#                  constraints:
+#                    primaryKey: true
+#                    nullable: false
+#              - column:
+#                  name: language_id
+#                  type: bigint
+#                  constraints:
+#                    nullable: false
+#              - column:
+#                  name: word
+#                  type: varchar(255)
+#                  constraints:
+#                    nullable: false
+#              - column:
+#                  name: translation
+#                  type: varchar(255)
+#                  constraints:
+#                    nullable: false
+#              - column:
+#                  name: example
+#                  type: text
+#              - addForeignKeyConstraint:
+#                  baseTableName: words
+#                  baseColumnNames: language_id
+#                  referencedTableName: languages
+#                  referencedColumnNames: id
+#                  constraintName: fk_language
+#              - addUniqueConstraint:
+#                  columnNames: language_id, word
+#                  tableName: words
+#                  constraintName: unique_language_word
+
+
+
+databaseChangeLog:
+  - changeSet:
+      id: create-words-table
+      author: your_name
+      changes:
+        - createTable:
+            tableName: words
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: language_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_language
+                    references: languages(id)
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_user
+                    references: users(id)
+              - column:
+                  name: word
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: translation
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: example
+                  type: text
+        - addUniqueConstraint:
+            tableName: words
+            columnNames: language_id, word, user_id
+            constraintName: unique_word_per_user_language
+

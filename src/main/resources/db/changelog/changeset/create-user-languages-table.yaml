@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-user-languages
+      author: your_name
+      changes:
+        - createTable:
+            tableName: user_languages
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: language_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+        - addForeignKeyConstraint:
+            baseTableName: user_languages
+            baseColumnNames: user_id
+            referencedTableName: users
+            referencedColumnNames: id
+            constraintName: fk_user
+        - addForeignKeyConstraint:
+            baseTableName: user_languages
+            baseColumnNames: language_id
+            referencedTableName: languages
+            referencedColumnNames: id
+            constraintName: fk_language
+        - addUniqueConstraint:
+            tableName: user_languages
+            columnNames: user_id, language_id
+            constraintName: uk_user_language

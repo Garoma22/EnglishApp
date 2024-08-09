@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_DB: postgresEnglishApp
+      POSTGRES_USER: englishBot
+      POSTGRES_PASSWORD: englishBot
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/englishAppData
+
+volumes:
+  postgres_data:
+    driver: local
+
+
+
+
+
+
+
