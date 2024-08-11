@@ -46,11 +46,14 @@ public class TelegramBot extends TelegramLongPollingBot {
     @Autowired
     AddWordService addWordService;
 
+    @Autowired
+    ChooseLanguageService chooseLanguageService;
+
     final BotConfig config;
 
     static final String ERROR_TEXT = "Error occurred: ";
-    static final String ESPAÑOL = "English";
-    static final String ENGLISH = "Español";
+    static final String ESPAÑOL = "Español";
+    static final String ENGLISH = "English";
 
 
 
@@ -59,7 +62,7 @@ public class TelegramBot extends TelegramLongPollingBot {
         this.config = config;
         List<BotCommand> listofCommands = new ArrayList<>(); //создание списка команд
         listofCommands.add(new BotCommand("/start", "get a welcome message"));
-        listofCommands.add(new BotCommand("/add a word", "add a word in the dictionary"));
+        listofCommands.add(new BotCommand("/add_a_word", "add a word in the dictionary"));
         try {
 
             // Регистрация команд в Telegram API: тут выше в параметрах метода создается объект команды SetMyCommands
@@ -80,10 +83,12 @@ public class TelegramBot extends TelegramLongPollingBot {
 
             if (messageText.equals("/start")) {
                 log.info("Processing /start command");
-                registrationService.registerUserFromStartCommand(update);
-                registrationService.chooselanguage(chatId); // Предлагаем пользователю выбрать язык после регистрации
+             registrationService.registerUserFromStartCommand(update);
+
+
+                chooseLanguageService.chooselanguage(chatId); // Предлагаем пользователю выбрать язык после регистрации
             }
-            if (messageText.equals("/add a word")){
+            if (messageText.equals("/add_a_word")){
                 log.info("Processing /add a word command");
             }
         }
@@ -96,14 +101,24 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (callbackData.equals(ESPAÑOL) || callbackData.equals(ENGLISH)) {
                     log.info("Callback data received: " + callbackData);
                     // Устанавливаем язык в базе данных
-                    registrationService.setUserLanguage(chatId, callbackData);
+                    chooseLanguageService.setUserLanguage(chatId, callbackData);
                     log.info("Message received: " + " язык установлен " + " from chatId: " + chatId);
 
                     // Отправляем сообщение о том, что язык установлен
                     String text = callbackData.equals(ESPAÑOL) ? "You have selected English" : "Seleccionaste español";
-                    registrationService.prepareAndSendMessage(chatId, text);
+                    executeMessage(chooseLanguageService.prepareAndSendMessage(chatId, text));
+
+
                 }
             }
+    }
+
+    private void executeMessage(SendMessage message) { //отправляется сообщение в чат
+        try {
+          execute(message);
+        } catch (TelegramApiException e) {
+            log.error("Failed to send message: ", e);
+        }
     }
 
 

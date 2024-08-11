@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 @Slf4j
 @Component
-public class DataInitializer implements CommandLineRunner {
+public class LanguageMenuInitializer implements CommandLineRunner {
 
     @Autowired
     private LanguageRepository languageRepository;
