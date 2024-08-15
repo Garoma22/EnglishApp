@@ -16,6 +16,8 @@ databaseChangeLog:
               - column:
                   name: chat_id
                   type: bigint
+                  constraints:
+                    unique: true
               - column:
                   name: first_name
                   type: varchar(100)

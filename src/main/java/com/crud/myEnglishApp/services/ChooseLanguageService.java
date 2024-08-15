@@ -8,6 +8,7 @@ import com.crud.myEnglishApp.repositories.*;
 import jakarta.transaction.Transactional;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
+import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Component;
@@ -38,17 +39,31 @@ public class ChooseLanguageService {
 
     //метод для проверки, есть ли у пользователя уже выбранный язык
     public boolean isLanguageSet(Long chatId) {
+        // Получаем пользователя по chatId
         Optional<User> user = userRepository.findByChatId(chatId);
-        Optional<UserLanguage> userLanguage = userLanguageRepository.findByUser(user.get());
 
-        if (user.isPresent() && userLanguage.isPresent()) {
+        // Проверяем, существует ли пользователь
+        if (user.isPresent()) {
+            // Получаем список языков, связанных с пользователем
+            List<UserLanguage> userLanguages = userLanguageRepository.findByUser(user.get());
 
-            log.info("isLanguageSet отработал, язык установлен " + userLanguage);
-            return true;
+            // Проверяем, пуст ли список языков
+            if (!userLanguages.isEmpty()) {
+                log.info("isLanguageSet отработал, язык установлен. Список языков: " + userLanguages);
+                return true;
+            } else {
+                log.info("isLanguageSet отработал, язык не найден для пользователя: " + user.get().getUserName());
+                return false;
+            }
+        } else {
+            log.info("isLanguageSet отработал, пользователь с chatId: {} не найден", chatId);
+            return false;
         }
-        log.info("isLanguageSet отработал, язык не найден");
-        return false;
     }
+
+
+
+
 
 
     @Transactional
@@ -91,34 +106,37 @@ public class ChooseLanguageService {
 
 
         if (isLanguageSet(chatId)) {
-            prepareAndSendMessage (chatId, "Language is already set. Use /change_language to update.");
+            prepareAndSendMessage(chatId, "Language is already set. Use /change_language to update.");
+        } else {
+            log.info("Сообщение из метода chooseLanguage что язык не найден");
         }
 
-        SendMessage message = new SendMessage(); // стандартный класс из пакета package org.telegram.telegrambots.meta.api.methods.send;
+            SendMessage message = new SendMessage(); // стандартный класс из пакета package org.telegram.telegrambots.meta.api.methods.send;
 
-        message.setChatId(String.valueOf(chatId)); // устанавливаем идентификатор чата
-        message.setText("Choose the language:"); // текст сообщения
+            message.setChatId(String.valueOf(chatId)); // устанавливаем идентификатор чата
+            message.setText("Choose the language:"); // текст сообщения
 
-        InlineKeyboardMarkup keyboardMarkup = new InlineKeyboardMarkup(); // объект клавиатура
+            InlineKeyboardMarkup keyboardMarkup = new InlineKeyboardMarkup(); // объект клавиатура
 
-        List<List<InlineKeyboardButton>> rows = new ArrayList<>(); // список строк клавиатуры
+            List<List<InlineKeyboardButton>> rows = new ArrayList<>(); // список строк клавиатуры
 
-        List<InlineKeyboardButton> row = new ArrayList<>();
-        InlineKeyboardButton englishButton = new InlineKeyboardButton();
-        englishButton.setText("English");
-        englishButton.setCallbackData("English"); // здесь используется код языка
-        row.add(englishButton);
+            List<InlineKeyboardButton> row = new ArrayList<>();
+            InlineKeyboardButton englishButton = new InlineKeyboardButton();
+            englishButton.setText("English");
+            englishButton.setCallbackData("English"); // здесь используется код языка
+            row.add(englishButton);
 
-        InlineKeyboardButton spanishButton = new InlineKeyboardButton();
-        spanishButton.setText("Español");
-        spanishButton.setCallbackData("Español"); // здесь используется код языка
-        row.add(spanishButton);
+            InlineKeyboardButton spanishButton = new InlineKeyboardButton();
+            spanishButton.setText("Español");
+            spanishButton.setCallbackData("Español"); // здесь используется код языка
+            row.add(spanishButton);
 
-        rows.add(row);
-        keyboardMarkup.setKeyboard(rows);
-        message.setReplyMarkup(keyboardMarkup);
+            rows.add(row);
+            keyboardMarkup.setKeyboard(rows);
+            message.setReplyMarkup(keyboardMarkup);
 
-        return message;
+            return message;
+
     }
 
 

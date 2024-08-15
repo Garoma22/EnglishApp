@@ -45,11 +45,26 @@ public class RegistrationService {
         long chatId = message.getChatId();
         String firstName = message.getChat().getFirstName();
         String lastName = message.getChat().getLastName();
-        String userName = message.getChat().getUserName();
+        String userName = message.getChat().getUserName(); //это никнейм
 
-        Optional<User> existingUser = userRepository.findByUserName(userName);
+      // Optional<User> existingUser = userRepository.findByUserName(userName);//вернулся garoma1989
+     //  log.info(userName + " То что вернулось из запроса к базе по поиску юзера");
 
-        if (existingUser.isEmpty()) {
+        List<User> existingUserList = userRepository.findAllByChatId(chatId);
+
+        if (existingUserList.isEmpty()) {
+            log.info("Запрос по chatId: {} не вернул ни одного пользователя.", chatId);
+        } else if (existingUserList.size() == 1) {
+            User user = existingUserList.get(0);
+            log.info("Запрос по chatId: {} вернул одного пользователя: {}", chatId, user);
+        } else {
+            log.warn("Запрос по chatId: {} вернул более одного пользователя: {}", chatId, existingUserList.size());
+            for (User user : existingUserList) {
+                log.warn("Дублирующая запись: {}", user);
+            }
+        }
+
+        if (existingUserList.isEmpty()) {
             User user = new User();
             user.setChatId(chatId);
             user.setFirstName(firstName);

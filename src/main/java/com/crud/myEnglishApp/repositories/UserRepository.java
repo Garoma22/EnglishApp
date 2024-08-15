@@ -2,6 +2,8 @@ package com.crud.myEnglishApp.repositories;
 
 import com.crud.myEnglishApp.models.Language;
 import com.crud.myEnglishApp.models.User;
+import lombok.extern.log4j.Log4j;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -21,9 +23,20 @@ import java.util.Optional;
 public interface UserRepository extends JpaRepository<User, Long> {
     Optional<User> findByUserName(String userName);
 
+
+
+
+
+
+
+
     Optional<User> findByChatId(Long chatId);
 
     @Query("SELECT ul.language FROM UserLanguage ul WHERE ul.user.id = :userId")
     List<Language> findLanguagesByUserId(@Param("userId") Long userId);
+
+
+
+    List<User> findAllByChatId(Long chatId);
 
 }

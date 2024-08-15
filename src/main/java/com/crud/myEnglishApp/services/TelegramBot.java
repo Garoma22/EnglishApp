@@ -74,6 +74,62 @@ public class TelegramBot extends TelegramLongPollingBot {
         }
     }
 
+//    @Override
+//    public void onUpdateReceived(Update update) {
+//        if (update.hasMessage() && update.getMessage().hasText()) {
+//            String messageText = update.getMessage().getText();
+//            long chatId = update.getMessage().getChatId();
+//            log.info("Message received: " + messageText + " from chatId: " + chatId);
+//
+//            if (messageText.equals("/start")) {
+//                log.info("Processing /start command");
+//             registrationService.registerUserFromStartCommand(update);
+//
+//               executeMessage(chooseLanguageService.chooselanguage(chatId)); // Предлагаем пользователю выбрать язык после регистрации
+//            }
+//            if (messageText.equals("/add_a_word")){
+//                log.info("Processing /add a word command");
+////                addWordService.chooseDictionary(Long.valueOf(update.getUpdateId()));
+//                try {
+//                    execute(addWordService.chooseDictionary(update)); //получаем меню кнопок
+//                } catch (TelegramApiException e) {
+//                    throw new RuntimeException(e);
+//                }
+//            }
+//        }
+//            if (update.hasCallbackQuery()) { //метод для обработки нажатия на кнопку
+//                String callbackData = update.getCallbackQuery().getData();
+//                long chatId = update.getCallbackQuery().getMessage().getChatId();
+//                log.info("Сюда доходим - это колбек метода onUpdateReceived");
+//
+//
+//                if (callbackData.equals(ESPAÑOL) || callbackData.equals(ENGLISH)) {
+//                    log.info("Callback data received: " + callbackData);
+//                    // Устанавливаем язык в базе данных
+//                    chooseLanguageService.setUserLanguage(chatId, callbackData);
+//                    log.info("Message received: " + " язык установлен " + " from chatId: " + chatId);
+//
+//                    // Отправляем сообщение о том, что язык установлен
+//                    String text = callbackData.equals(ENGLISH) ? "You have selected English" : "Seleccionaste español";
+//                    executeMessage(chooseLanguageService.prepareAndSendMessage(chatId, text));
+//
+//
+//                }
+//
+//                if (callbackData.equals("DICT_" + ENGLISH)) {
+//                    log.info("Callback data received from ENGLISH DICT: " + callbackData);
+//
+//                    addWordService.processUserInput(update);
+//
+//
+//                }
+//
+//
+//            }
+//    }
+
+
+
     @Override
     public void onUpdateReceived(Update update) {
         if (update.hasMessage() && update.getMessage().hasText()) {
@@ -83,36 +139,67 @@ public class TelegramBot extends TelegramLongPollingBot {
 
             if (messageText.equals("/start")) {
                 log.info("Processing /start command");
-             registrationService.registerUserFromStartCommand(update);
-
-
-                chooseLanguageService.chooselanguage(chatId); // Предлагаем пользователю выбрать язык после регистрации
+                registrationService.registerUserFromStartCommand(update);
+                executeMessage(chooseLanguageService.chooselanguage(chatId)); // Предлагаем пользователю выбрать язык после регистрации
             }
-            if (messageText.equals("/add_a_word")){
+
+            if (messageText.equals("/add_a_word")) {
                 log.info("Processing /add a word command");
-            }
-        }
-            if (update.hasCallbackQuery()) { //метод для обработки нажатия на кнопку
-                String callbackData = update.getCallbackQuery().getData();
-                long chatId = update.getCallbackQuery().getMessage().getChatId();
-                log.info("Сюда доходим ");
-
-
-                if (callbackData.equals(ESPAÑOL) || callbackData.equals(ENGLISH)) {
-                    log.info("Callback data received: " + callbackData);
-                    // Устанавливаем язык в базе данных
-                    chooseLanguageService.setUserLanguage(chatId, callbackData);
-                    log.info("Message received: " + " язык установлен " + " from chatId: " + chatId);
-
-                    // Отправляем сообщение о том, что язык установлен
-                    String text = callbackData.equals(ESPAÑOL) ? "You have selected English" : "Seleccionaste español";
-                    executeMessage(chooseLanguageService.prepareAndSendMessage(chatId, text));
-
-
+                try {
+                    execute(addWordService.chooseDictionary(update)); // Отправляем меню кнопок для выбора словаря
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
                 }
             }
+
+            // Обработка ввода слова, перевода или примера
+            if (addWordService.isInWordAdditionProcess(chatId)) {
+                SendMessage message = addWordService.processUserInput(update);
+                try {
+                    execute(message);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
+
+        if (update.hasCallbackQuery()) { // метод для обработки нажатия на кнопку
+            String callbackData = update.getCallbackQuery().getData();
+            long chatId = update.getCallbackQuery().getMessage().getChatId();
+            log.info("Callback query received: " + callbackData);
+
+            // Обработка выбора языка
+            if (callbackData.equals(ESPAÑOL) || callbackData.equals(ENGLISH)) {
+                log.info("Callback data received: " + callbackData);
+                // Устанавливаем язык в базе данных
+                chooseLanguageService.setUserLanguage(chatId, callbackData);
+                log.info("Language set: " + callbackData + " for chatId: " + chatId);
+
+                // Отправляем сообщение о том, что язык установлен
+                String text = callbackData.equals(ENGLISH) ? "You have selected English" : "Seleccionaste español";
+                executeMessage(chooseLanguageService.prepareAndSendMessage(chatId, text));
+            }
+
+            // Обработка выбора словаря (выбор языка для добавления слова)
+            if (callbackData.startsWith("DICT_")) {
+                log.info("Dictionary selected: " + callbackData);
+
+                // Сохраняем выбранный язык и продолжаем процесс добавления слова
+                addWordService.setSelectedLanguage(chatId, callbackData.replace("DICT_", ""));
+                SendMessage message = new SendMessage();
+                message.setChatId(String.valueOf(chatId));
+                message.setText("You selected " + callbackData.replace("DICT_", "") + ". Please enter the word:");
+                try {
+                    execute(message);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
     }
 
+
+    //этот метод как раз отправляет в чат сообщения он один на все сервисы должен быть
     private void executeMessage(SendMessage message) { //отправляется сообщение в чат
         try {
           execute(message);
