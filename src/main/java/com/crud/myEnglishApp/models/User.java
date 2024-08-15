@@ -61,7 +61,7 @@ public class User {
     private List<UserLanguage> userLanguages = new ArrayList<>();
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<UserWord> userWords = new ArrayList<>();
+    private List<Word> userWords = new ArrayList<>();
 
     private Timestamp registeredAt;
 

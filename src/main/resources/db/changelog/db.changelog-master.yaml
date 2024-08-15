@@ -7,6 +7,5 @@ databaseChangeLog:
       file: db/changelog/changeset/create-user-languages-table.yaml
   - include:
       file: db/changelog/changeset/create-words-table.yaml
-  - include:
-      file: db/changelog/changeset/create-user-words-table.yaml
+
 

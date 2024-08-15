@@ -41,8 +41,7 @@ public class AddWordService {
 
     @Autowired
     private WordRepository wordRepository;
-    @Autowired
-    private UserState userState;
+
 
 
     private Map<Long, Word> tempWordStorage = new HashMap<>();

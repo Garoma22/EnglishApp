@@ -32,8 +32,8 @@ public class RegistrationService {
     private UserRepository userRepository;
     @Autowired
     private LanguageRepository languageRepository;
-    @Autowired
-    private UserWordRepository userWordRepository;
+//    @Autowired
+//    private UserWordRepository userWordRepository;
     @Autowired
     private WordRepository wordRepository;
     @Autowired
